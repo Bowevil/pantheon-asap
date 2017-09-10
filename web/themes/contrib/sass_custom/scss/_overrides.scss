@@ -18,6 +18,18 @@
 // jQuery UI style overrides.
 @import "jquery-ui/autocomplete";
 
+
+// Google fonts.
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
+
+$text-color:  $gray-dark !default;
+$navbar-default-bg: #001745;
+$white: #ffffff;
+$black: #000000;
+$yellow: #fee300;
+$blue: #001745;
+
 ol, ul {
   padding-left: 1.5em;
   .popover &:last-child {
@@ -57,7 +69,6 @@ p:last-child,
   }
 }
 
-
 .help-block, .control-group .help-inline {
   color: $gray-light;
   font-size: 12px;
@@ -68,8 +79,120 @@ p:last-child,
   }
 }
 
+body {
+  background-color: $black;
+}
+
+h1, .h1 {
+font-size: 58px;
+font-weight: bold;
+}
+
+.navbar-collapse.collapse {
+  background-color: $blue;
+  border-top: 1px solid #fee300;
+  border-bottom: 1px solid #fee300;
+}
+
+.form-type-search {
+  float: right;
+  width: 200px;
+  clear: both;
+  margin-top: -25px;
+    .js-form-submit {
+      color: $black;
+      background-color: $yellow;
+    }
+}
+.navbar-nav {
+  float: right;
+}
+
+.menu.nav.navbar-nav {
+  @include breakpoint(sm) {
+    position: relative;
+  }
+  @include breakpoint(md) {
+    position: absolute;
+    top: 85px;
+    right: 0px;
+  }
+}
+
+.navbar-header {
+  width: 100%;
+}
+
+.navbar-right {
+  margin-top: -80px;
+}
+
+a.logo {
+  img {
+    max-width: 800px;
+  }
+}
+
+.page-header  {
+  border-bottom: none;
+}
+
+#block-sass-custom-calltoactionmenu {
+
+  background-color: $white;
+  border-top: 6px solid $yellow;
+  border-radius: 0px;
+  @include breakpoint(xs) {
+    min-height: 100%;
+  }
+  @include breakpoint(md) {
+    min-height: 150px;
+    max-height: 150px;
+  }
+
+  .nav {
+    background-color: green;
+    @include breakpoint(xs) {
+    }
+    @include breakpoint(sm) {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+    @include breakpoint(md) {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+  }
+
+  li {
+
+    @include breakpoint(xs) {
+      width: 100%;
+      margin: 5px;
+    }
+    @include breakpoint(md) {
+      margin-left: 50px;
+    }
+    @include breakpoint(lg) {
+      margin-left: 120px;
+    }
+    background-color: #0c5ecf;
+    float: left;
+
+      a {
+            color: $white;
+      }
+  }
+
+}
+
 p.address {
   background-color: #CCFF00;
 }
 
-h1 { color: red;}
+
+.views-field-field-caption {
+   text-transform: uppercase;
+   font-weight: bold;
+   color: $white;
+}
