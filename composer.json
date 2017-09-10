@@ -25,6 +25,7 @@
         "drupal/core": "^8",
         "drupal/devel": "^1.0",
         "drupal/simple_block": "^1.0@beta",
+        "drupal/views_slideshow": "^4.5",
         "drupal/webform": "^5.0@beta",
         "drush/drush": "~8",
         "rvtraveller/qs-composer-installer": "^1.1",
