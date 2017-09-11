@@ -80,12 +80,24 @@ p:last-child,
 }
 
 body {
-  background-color: $black;
+  background-color: $white;
 }
 
 h1, .h1 {
 font-size: 58px;
 font-weight: bold;
+}
+
+h2, .h2 {
+font-size: 36px;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+}
+
+h4, .h4 {
+  font-size: 24px;
+  color: $blue;
 }
 
 .navbar-collapse.collapse {
@@ -137,10 +149,49 @@ a.logo {
   border-bottom: none;
 }
 
+
+// front page slideshow
+
+
+.front-page-slideshow {
+  background-color: blue;
+
+  .views-field-field-caption {
+     text-transform: uppercase;
+     font-weight: bold;
+     color: $white;
+  }
+
+  .views-field-field-image-departments {
+    position: relative;
+    top: 0px;
+  }
+
+  .views-field-field-caption {
+  }
+
+.views-slideshow-controls-bottom {
+  background-color: green;
+}
+
+  .bullet-filled {
+    float: left;
+    padding-right: 15px;
+    color: $yellow;
+  }
+}
+
+
+
+// Call to action //
+
 #block-sass-custom-calltoactionmenu {
 
   background-color: $white;
   border-top: 6px solid $yellow;
+  border-bottom: 6px solid $blue;
+  border-left: none;
+  border-right: none;
   border-radius: 0px;
   @include breakpoint(xs) {
     min-height: 100%;
@@ -187,18 +238,41 @@ a.logo {
 
       a {
             color: $white;
+            text-align: center;
       }
   }
 
 }
 
-p.address {
-  background-color: #CCFF00;
+// Our Services
+
+.our-services {
+  border-top: 6px solid $blue;
 }
 
 
-.views-field-field-caption {
-   text-transform: uppercase;
-   font-weight: bold;
-   color: $white;
+
+// Footer
+
+.footer {
+    background-color: $blue;
+
+    .given-name, .family-name {
+      display: none;
+    }
+
+    ul, p, .views-label-field-client-phone, .views-label-field-client-fax {
+      color: $white;
+    }
+
+    .views-field-field-image-departments {
+      padding-bottom: 20px;
+    }
+
+    @include breakpoint(xs) {
+      .col-1, .col-2, .col-3 > .views-field-field-image-departments {
+        display: none;
+      }
+    }
+
 }
