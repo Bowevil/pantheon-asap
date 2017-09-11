@@ -151,33 +151,39 @@ a.logo {
   }
 
   .nav {
-    background-color: green;
     @include breakpoint(xs) {
     }
     @include breakpoint(sm) {
+      display: flex;
       padding-top: 40px;
       padding-bottom: 30px;
     }
     @include breakpoint(md) {
-      margin-left: 20%;
-      margin-right: 20%;
+      display: flex;
+      margin-left: 10%;
+      margin-right: 10%;
     }
   }
 
   li {
+    background-color: #0c5ecf;
 
     @include breakpoint(xs) {
       width: 100%;
       margin: 5px;
     }
+    @include breakpoint(sm) {
+      flex: 1; /*grow*/
+      margin-right: 20px;
+    }
     @include breakpoint(md) {
-      margin-left: 50px;
+      flex: 1; /*grow*/
+      margin-right: 20px;
     }
     @include breakpoint(lg) {
-      margin-left: 120px;
+      flex: 1; /*grow*/
+      margin-right: 20px;
     }
-    background-color: #0c5ecf;
-    float: left;
 
       a {
             color: $white;

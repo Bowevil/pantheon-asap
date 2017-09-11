@@ -9691,13 +9691,10 @@ a.logo img {
     max-height: 150px;
   }
 }
-/* line 153, ../scss/_overrides.scss */
-#block-sass-custom-calltoactionmenu .nav {
-  background-color: green;
-}
 @media (min-width: 768px) {
   /* line 153, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
+    display: flex;
     padding-top: 40px;
     padding-bottom: 30px;
   }
@@ -9705,45 +9702,57 @@ a.logo img {
 @media (min-width: 992px) {
   /* line 153, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
-    margin-left: 20%;
-    margin-right: 20%;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
-/* line 167, ../scss/_overrides.scss */
+/* line 168, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li {
   background-color: #0c5ecf;
-  float: left;
 }
 @media (max-width: 767px) {
-  /* line 167, ../scss/_overrides.scss */
+  /* line 168, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     width: 100%;
     margin: 5px;
   }
 }
-@media (min-width: 992px) {
-  /* line 167, ../scss/_overrides.scss */
+@media (min-width: 768px) {
+  /* line 168, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
-    margin-left: 50px;
+    flex: 1;
+    /*grow*/
+    margin-right: 20px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 168, ../scss/_overrides.scss */
+  #block-sass-custom-calltoactionmenu li {
+    flex: 1;
+    /*grow*/
+    margin-right: 20px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 167, ../scss/_overrides.scss */
+  /* line 168, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
-    margin-left: 120px;
+    flex: 1;
+    /*grow*/
+    margin-right: 20px;
   }
 }
-/* line 182, ../scss/_overrides.scss */
+/* line 188, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a {
   color: #ffffff;
 }
 
-/* line 189, ../scss/_overrides.scss */
+/* line 195, ../scss/_overrides.scss */
 p.address {
   background-color: #CCFF00;
 }
 
-/* line 194, ../scss/_overrides.scss */
+/* line 200, ../scss/_overrides.scss */
 .views-field-field-caption {
   text-transform: uppercase;
   font-weight: bold;
