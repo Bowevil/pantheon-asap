@@ -171,10 +171,16 @@ a.logo {
   }
 
 .views-slideshow-controls-bottom {
-  background-color: green;
+  //background-color: green;
+  margin: auto;
+  width: 100px;
+  padding-left: 20px;
 }
 
   .bullet-filled {
+
+
+    cursor:pointer;
     float: left;
     padding-right: 15px;
     color: $yellow;
