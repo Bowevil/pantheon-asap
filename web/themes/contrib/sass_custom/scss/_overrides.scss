@@ -149,14 +149,22 @@ a.logo {
   border-bottom: none;
 }
 
+.main-container {
+  margin-top: -50px;
+}
 
 // front page slideshow
 
 
 .front-page-slideshow {
-  background-color: blue;
+  background-image: url("../images/background_export.jpg");
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 768px;
+  max-height: 768px;
 
   .views-field-field-caption {
+      padding: 100px;
      text-transform: uppercase;
      font-weight: bold;
      color: $white;
@@ -178,8 +186,6 @@ a.logo {
 }
 
   .bullet-filled {
-
-
     cursor:pointer;
     float: left;
     padding-right: 15px;
@@ -187,7 +193,9 @@ a.logo {
   }
 }
 
-
+.views-element-container.contextual-region.form-group {
+  margin-bottom: 0px;
+}
 
 // Call to action //
 
