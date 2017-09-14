@@ -86,6 +86,9 @@ body {
 h1, .h1 {
 font-size: 58px;
 font-weight: bold;
+  @include breakpoint(xs) {
+    font-size: 18px;
+  }
 }
 
 h2, .h2 {
@@ -157,27 +160,39 @@ a.logo {
 
 // front page slideshow
 
-
 .front-page-slideshow {
   background-image: url("../images/background_export.jpg");
   background-repeat: no-repeat;
-  max-width: 100%;
-  min-height: 768px;
-  max-height: 768px;
+
+  @include breakpoint(xs) {
+    min-height: 268px;
+    max-height: 268px;
+    background-size: 100%;
+  }
+  @include breakpoint(md) {
+    min-height: 768px;
+    max-height: 768px;
+  }
 
   .views-field-field-caption {
-      padding: 100px;
-     text-transform: uppercase;
-     font-weight: bold;
-     color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+    @include breakpoint(xs) {
+      padding-top: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include breakpoint(md) {
+      padding-top: 50px;
+      padding-left: 100px;
+      padding-right: 50px;
+    }
   }
 
   .views-field-field-image-departments {
     position: relative;
     top: 0px;
-  }
-
-  .views-field-field-caption {
   }
 
 .views-slideshow-controls-bottom {
@@ -251,10 +266,13 @@ a.logo {
       flex: 1; /*grow*/
       margin-right: 20px;
     }
-
       a {
-            color: $white;
-            text-align: center;
+          color: $white;
+          text-align: center;
+      }
+      a:hover, a:focus {
+        background-color: #0c5ecf;
+        color: $yellow;
       }
   }
 
@@ -277,7 +295,7 @@ a.logo {
       display: none;
     }
 
-    ul, p, .views-label-field-client-phone, .views-label-field-client-fax {
+    ul, p, .views-label-field-client-phone, .views-label-field-client-fax, .member {
       color: $white;
     }
 
@@ -285,9 +303,13 @@ a.logo {
       padding-bottom: 20px;
     }
 
+    #block-links, .block-views-blockclient-footer-block-1, .block-user-login-block {
+      height: 200px;
+    }
+
     @include breakpoint(xs) {
       .col-1, .col-2, .col-3 > .views-field-field-image-departments {
-        display: none;
+        //display: none;
       }
     }
 
