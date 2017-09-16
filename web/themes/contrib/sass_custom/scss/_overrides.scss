@@ -162,8 +162,8 @@ a.logo {
 
 #front-page-flexslider-plane {
   background-color: transparent;
-  background-image: url("../images/bg_1920x768.jpg");
-  background-size: 100% 100%x;
+  background-image: url("../images/bg_1920x1080.jpg");  
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   border: none;
   border-bottom: 6px solid $yellow;
@@ -310,4 +310,20 @@ a.logo {
       }
     }
 
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1570px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1870px;
+  }
 }

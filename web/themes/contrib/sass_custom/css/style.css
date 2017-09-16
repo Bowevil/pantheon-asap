@@ -9702,8 +9702,8 @@ a.logo img {
 /* line 163, ../scss/_overrides.scss */
 #front-page-flexslider-plane {
   background-color: transparent;
-  background-image: url("../images/bg_1920x768.jpg");
-  background-size: 100% 100% x;
+  background-image: url("../images/bg_1920x1080.jpg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   border: none;
   border-bottom: 6px solid #fee300;
@@ -9868,4 +9868,23 @@ a.logo img {
 /* line 303, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
+}
+
+@media screen and (min-width: 1400px) {
+  /* line 316, ../scss/_overrides.scss */
+  .container {
+    width: 1370px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  /* line 321, ../scss/_overrides.scss */
+  .container {
+    width: 1570px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  /* line 326, ../scss/_overrides.scss */
+  .container {
+    width: 1870px;
+  }
 }
