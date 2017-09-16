@@ -162,7 +162,7 @@ a.logo {
 
 #front-page-flexslider-plane {
   background-color: transparent;
-  background-image: url("../images/bg_1920x1080.jpg");  
+  background-image: url("../images/bg_1920x1080.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border: none;
@@ -216,6 +216,41 @@ a.logo {
 .views-element-container.contextual-region.form-group {
   margin-bottom: 0px;
 }
+
+
+// Products highlighted //
+
+#block-views-block-frontpage-block-2 {
+  background-image: url("../images/product_slider_background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  border-bottom: 6px solid $blue;
+}
+
+#front-page-flexslider-product {
+  background-color: transparent;
+  border: none;
+
+    .flex-control-nav.flex-control-paging {
+      display: none;
+    }
+
+    .views-field-body {
+      width: 60%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+}
+
+.flexslider .slides img {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
 
 // Call to action //
 
@@ -281,9 +316,7 @@ a.logo {
 
 // Our Services
 
-.our-services {
-  border-top: 6px solid $blue;
-}
+
 
 
 

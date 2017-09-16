@@ -9765,7 +9765,40 @@ a.logo img {
   margin-bottom: 0px;
 }
 
-/* line 222, ../scss/_overrides.scss */
+/* line 223, ../scss/_overrides.scss */
+#block-views-block-frontpage-block-2 {
+  background-image: url("../images/product_slider_background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  border-bottom: 6px solid #001745;
+}
+
+/* line 231, ../scss/_overrides.scss */
+#front-page-flexslider-product {
+  background-color: transparent;
+  border: none;
+}
+/* line 235, ../scss/_overrides.scss */
+#front-page-flexslider-product .flex-control-nav.flex-control-paging {
+  display: none;
+}
+/* line 239, ../scss/_overrides.scss */
+#front-page-flexslider-product .views-field-body {
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 248, ../scss/_overrides.scss */
+.flexslider .slides img {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+/* line 257, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu {
   background-color: #ffffff;
   border-bottom: 6px solid #001745;
@@ -9774,20 +9807,20 @@ a.logo img {
   border-radius: 0px;
 }
 @media (max-width: 767px) {
-  /* line 222, ../scss/_overrides.scss */
+  /* line 257, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu {
     min-height: 100%;
   }
 }
 @media (min-width: 992px) {
-  /* line 222, ../scss/_overrides.scss */
+  /* line 257, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu {
     min-height: 150px;
     max-height: 150px;
   }
 }
 @media (min-width: 768px) {
-  /* line 236, ../scss/_overrides.scss */
+  /* line 271, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
     display: flex;
     padding-top: 40px;
@@ -9795,26 +9828,26 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 236, ../scss/_overrides.scss */
+  /* line 271, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-/* line 251, ../scss/_overrides.scss */
+/* line 286, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li {
   background-color: #0c5ecf;
 }
 @media (max-width: 767px) {
-  /* line 251, ../scss/_overrides.scss */
+  /* line 286, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     width: 100%;
     margin: 5px;
   }
 }
 @media (min-width: 768px) {
-  /* line 251, ../scss/_overrides.scss */
+  /* line 286, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
@@ -9822,7 +9855,7 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 251, ../scss/_overrides.scss */
+  /* line 286, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
@@ -9830,60 +9863,55 @@ a.logo img {
   }
 }
 @media (min-width: 1200px) {
-  /* line 251, ../scss/_overrides.scss */
+  /* line 286, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
     margin-right: 20px;
   }
 }
-/* line 270, ../scss/_overrides.scss */
+/* line 305, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a {
   color: #ffffff;
   text-align: center;
 }
-/* line 274, ../scss/_overrides.scss */
+/* line 309, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a:hover, #block-sass-custom-calltoactionmenu li a:focus {
   background-color: #0c5ecf;
   color: #fee300;
 }
 
-/* line 284, ../scss/_overrides.scss */
-.our-services {
-  border-top: 6px solid #001745;
-}
-
-/* line 292, ../scss/_overrides.scss */
+/* line 325, ../scss/_overrides.scss */
 .footer {
   background-color: #001745;
 }
-/* line 295, ../scss/_overrides.scss */
+/* line 328, ../scss/_overrides.scss */
 .footer .given-name, .footer .family-name {
   display: none;
 }
-/* line 299, ../scss/_overrides.scss */
+/* line 332, ../scss/_overrides.scss */
 .footer ul, .footer p, .footer .views-label-field-client-phone, .footer .views-label-field-client-fax, .footer .member {
   color: #ffffff;
 }
-/* line 303, ../scss/_overrides.scss */
+/* line 336, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
 }
 
 @media screen and (min-width: 1400px) {
-  /* line 316, ../scss/_overrides.scss */
+  /* line 349, ../scss/_overrides.scss */
   .container {
     width: 1370px;
   }
 }
 @media screen and (min-width: 1600px) {
-  /* line 321, ../scss/_overrides.scss */
+  /* line 354, ../scss/_overrides.scss */
   .container {
     width: 1570px;
   }
 }
 @media screen and (min-width: 1900px) {
-  /* line 326, ../scss/_overrides.scss */
+  /* line 359, ../scss/_overrides.scss */
   .container {
     width: 1870px;
   }
