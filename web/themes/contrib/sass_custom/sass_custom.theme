@@ -5,3 +5,12 @@
  *
  * Place your custom PHP code in this file.
  */
+
+
+ function sass_custom(&$variables) {
+
+   if (!empty($variables['page']['highlighted'])) {
+     $variables['page']['highlighted']['#attributes']['class'][] = 'modal fade';
+     $variables['page']['highlighted']['#attributes']['data-toggle'][] = 'modal';
+   }
+ }

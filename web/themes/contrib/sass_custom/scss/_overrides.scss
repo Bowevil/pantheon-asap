@@ -238,11 +238,13 @@ a.logo {
 
     .views-field-body {
       width: 60%;
+      @include breakpoint(xs) {
+        width: 90%;
+      }
       text-align: center;
       margin-left: auto;
       margin-right: auto;
     }
-
 }
 
 .flexslider .slides img {
