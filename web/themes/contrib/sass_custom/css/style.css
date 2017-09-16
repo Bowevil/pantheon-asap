@@ -9700,95 +9700,94 @@ a.logo img {
 }
 
 /* line 163, ../scss/_overrides.scss */
-.front-page-slideshow {
-  background-image: url("../images/background_export.jpg");
+#front-page-flexslider-plane {
+  background-color: transparent;
+  background-image: url("../images/bg_1920x768.jpg");
+  background-size: 100% 100% x;
   background-repeat: no-repeat;
+  border: none;
+  border-bottom: 6px solid #fee300;
 }
-@media (max-width: 767px) {
-  /* line 163, ../scss/_overrides.scss */
-  .front-page-slideshow {
-    min-height: 268px;
-    max-height: 268px;
-    background-size: 100%;
-  }
+
+/* line 172, ../scss/_overrides.scss */
+.flexslider {
+  margin: 0px;
 }
-@media (min-width: 992px) {
-  /* line 163, ../scss/_overrides.scss */
-  .front-page-slideshow {
-    min-height: 768px;
-    max-height: 768px;
-  }
-}
-/* line 177, ../scss/_overrides.scss */
-.front-page-slideshow .views-field-field-caption {
+
+/* line 176, ../scss/_overrides.scss */
+.flex-caption {
   text-transform: uppercase;
-  font-weight: bold;
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 177, ../scss/_overrides.scss */
-  .front-page-slideshow .views-field-field-caption {
+  /* line 176, ../scss/_overrides.scss */
+  .flex-caption {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 176, ../scss/_overrides.scss */
+  .flex-caption {
     padding-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 @media (min-width: 992px) {
-  /* line 177, ../scss/_overrides.scss */
-  .front-page-slideshow .views-field-field-caption {
+  /* line 176, ../scss/_overrides.scss */
+  .flex-caption {
     padding-top: 50px;
     padding-left: 100px;
     padding-right: 50px;
   }
 }
-/* line 193, ../scss/_overrides.scss */
-.front-page-slideshow .views-field-field-image-departments {
-  position: relative;
-  top: 0px;
-}
-/* line 198, ../scss/_overrides.scss */
-.front-page-slideshow .views-slideshow-controls-bottom {
-  margin: auto;
-  width: 100px;
-  padding-left: 20px;
-}
-/* line 205, ../scss/_overrides.scss */
-.front-page-slideshow .bullet-filled {
-  cursor: pointer;
-  float: left;
-  padding-right: 15px;
-  color: #fee300;
+
+/* line 197, ../scss/_overrides.scss */
+.flex-control-nav {
+  bottom: 10px;
 }
 
-/* line 213, ../scss/_overrides.scss */
+/* line 201, ../scss/_overrides.scss */
+.flex-control-paging {
+  z-index: 10;
+}
+/* line 203, ../scss/_overrides.scss */
+.flex-control-paging li a {
+  background: #fee300;
+}
+/* line 206, ../scss/_overrides.scss */
+.flex-control-paging li a.flex-active {
+  background: #fee300;
+}
+
+/* line 211, ../scss/_overrides.scss */
 .views-element-container.contextual-region.form-group {
   margin-bottom: 0px;
 }
 
-/* line 219, ../scss/_overrides.scss */
+/* line 217, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu {
   background-color: #ffffff;
-  border-top: 6px solid #fee300;
   border-bottom: 6px solid #001745;
   border-left: none;
   border-right: none;
   border-radius: 0px;
 }
 @media (max-width: 767px) {
-  /* line 219, ../scss/_overrides.scss */
+  /* line 217, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu {
     min-height: 100%;
   }
 }
 @media (min-width: 992px) {
-  /* line 219, ../scss/_overrides.scss */
+  /* line 217, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu {
     min-height: 150px;
     max-height: 150px;
   }
 }
 @media (min-width: 768px) {
-  /* line 235, ../scss/_overrides.scss */
+  /* line 231, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
     display: flex;
     padding-top: 40px;
@@ -9796,26 +9795,26 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 235, ../scss/_overrides.scss */
+  /* line 231, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-/* line 250, ../scss/_overrides.scss */
+/* line 246, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li {
   background-color: #0c5ecf;
 }
 @media (max-width: 767px) {
-  /* line 250, ../scss/_overrides.scss */
+  /* line 246, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     width: 100%;
     margin: 5px;
   }
 }
 @media (min-width: 768px) {
-  /* line 250, ../scss/_overrides.scss */
+  /* line 246, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
@@ -9823,7 +9822,7 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 250, ../scss/_overrides.scss */
+  /* line 246, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
@@ -9831,46 +9830,42 @@ a.logo img {
   }
 }
 @media (min-width: 1200px) {
-  /* line 250, ../scss/_overrides.scss */
+  /* line 246, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
     margin-right: 20px;
   }
 }
-/* line 269, ../scss/_overrides.scss */
+/* line 265, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a {
   color: #ffffff;
   text-align: center;
 }
-/* line 273, ../scss/_overrides.scss */
+/* line 269, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a:hover, #block-sass-custom-calltoactionmenu li a:focus {
   background-color: #0c5ecf;
   color: #fee300;
 }
 
-/* line 283, ../scss/_overrides.scss */
+/* line 279, ../scss/_overrides.scss */
 .our-services {
   border-top: 6px solid #001745;
 }
 
-/* line 291, ../scss/_overrides.scss */
+/* line 287, ../scss/_overrides.scss */
 .footer {
   background-color: #001745;
 }
-/* line 294, ../scss/_overrides.scss */
+/* line 290, ../scss/_overrides.scss */
 .footer .given-name, .footer .family-name {
   display: none;
 }
-/* line 298, ../scss/_overrides.scss */
+/* line 294, ../scss/_overrides.scss */
 .footer ul, .footer p, .footer .views-label-field-client-phone, .footer .views-label-field-client-fax, .footer .member {
   color: #ffffff;
 }
-/* line 302, ../scss/_overrides.scss */
-.footer .views-field-field-image-departments {
-  padding-bottom: 20px;
-}
-/* line 306, ../scss/_overrides.scss */
+/* line 298, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
 }

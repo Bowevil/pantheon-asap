@@ -160,54 +160,52 @@ a.logo {
 
 // front page slideshow
 
-.front-page-slideshow {
-  background-image: url("../images/background_export.jpg");
+#front-page-flexslider-plane {
+  background-color: transparent;
+  background-image: url("../images/bg_1920x768.jpg");
+  background-size: 100% 100%x;
   background-repeat: no-repeat;
-
-  @include breakpoint(xs) {
-    min-height: 268px;
-    max-height: 268px;
-    background-size: 100%;
-  }
-  @include breakpoint(md) {
-    min-height: 768px;
-    max-height: 768px;
-  }
-
-  .views-field-field-caption {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $white;
-    @include breakpoint(xs) {
-      padding-top: 0px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    @include breakpoint(md) {
-      padding-top: 50px;
-      padding-left: 100px;
-      padding-right: 50px;
-    }
-  }
-
-  .views-field-field-image-departments {
-    position: relative;
-    top: 0px;
-  }
-
-.views-slideshow-controls-bottom {
-  //background-color: green;
-  margin: auto;
-  width: 100px;
-  padding-left: 20px;
+  border: none;
+  border-bottom: 6px solid $yellow;
 }
 
-  .bullet-filled {
-    cursor:pointer;
-    float: left;
-    padding-right: 15px;
-    color: $yellow;
+.flexslider {
+    margin: 0px;
+}
+
+.flex-caption {
+  text-transform: uppercase;
+  //font-weight: bold;
+  color: $white;
+
+  @include breakpoint(xs) {
+    font-size: 18px;
   }
+
+  @include breakpoint(xs) {
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include breakpoint(md) {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 50px;
+  }
+}
+
+.flex-control-nav {
+    bottom: 10px;
+}
+
+.flex-control-paging {
+  z-index: 10;
+  li a {
+        background: $yellow;
+  }
+ li a.flex-active {
+        background: $yellow;
+ }
 }
 
 .views-element-container.contextual-region.form-group {
@@ -217,9 +215,7 @@ a.logo {
 // Call to action //
 
 #block-sass-custom-calltoactionmenu {
-
   background-color: $white;
-  border-top: 6px solid $yellow;
   border-bottom: 6px solid $blue;
   border-left: none;
   border-right: none;
@@ -297,10 +293,6 @@ a.logo {
 
     ul, p, .views-label-field-client-phone, .views-label-field-client-fax, .member {
       color: $white;
-    }
-
-    .views-field-field-image-departments {
-      padding-bottom: 20px;
     }
 
     #block-links, .block-views-blockclient-footer-block-1, .block-user-login-block {
