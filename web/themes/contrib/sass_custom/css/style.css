@@ -9911,21 +9911,26 @@ a.logo img {
 .footer .form-item-name, .footer .js-form-item-pass {
   color: #fee300;
 }
+/* line 357, ../scss/_overrides.scss */
+.footer #edit-name--2::placeholder::after {
+  display: inline-block;
+  content: "\e008";
+}
 
 @media screen and (min-width: 1400px) {
-  /* line 360, ../scss/_overrides.scss */
+  /* line 366, ../scss/_overrides.scss */
   .container {
     width: 1370px;
   }
 }
 @media screen and (min-width: 1600px) {
-  /* line 365, ../scss/_overrides.scss */
+  /* line 371, ../scss/_overrides.scss */
   .container {
     width: 1570px;
   }
 }
 @media screen and (min-width: 1900px) {
-  /* line 370, ../scss/_overrides.scss */
+  /* line 376, ../scss/_overrides.scss */
   .container {
     width: 1870px;
   }

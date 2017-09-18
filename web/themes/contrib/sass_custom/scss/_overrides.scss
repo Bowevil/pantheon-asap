@@ -354,6 +354,12 @@ a.logo {
       color: $yellow;
     }
 
+    #edit-name--2::placeholder::after {
+      display: inline-block;
+      content:"\e008";
+    }
+
+
 }
 
 @media screen and (min-width: 1400px) {
