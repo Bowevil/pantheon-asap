@@ -327,6 +327,10 @@ a.logo {
 .footer {
     background-color: $blue;
 
+    a {
+      color: $yellow;
+    }
+
     .given-name, .family-name {
       display: none;
     }
@@ -334,6 +338,7 @@ a.logo {
     ul, p, .views-label-field-client-phone, .views-label-field-client-fax, .member {
       color: $white;
     }
+
 
     #block-links, .block-views-blockclient-footer-block-1, .block-user-login-block {
       height: 200px;
@@ -343,6 +348,10 @@ a.logo {
       .col-1, .col-2, .col-3 > .views-field-field-image-departments {
         //display: none;
       }
+    }
+
+    .form-item-name, .js-form-item-pass {
+      color: $yellow;
     }
 
 }

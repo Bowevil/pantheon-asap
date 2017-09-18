@@ -9892,32 +9892,40 @@ a.logo img {
   background-color: #001745;
 }
 /* line 330, ../scss/_overrides.scss */
+.footer a {
+  color: #fee300;
+}
+/* line 334, ../scss/_overrides.scss */
 .footer .given-name, .footer .family-name {
   display: none;
 }
-/* line 334, ../scss/_overrides.scss */
+/* line 338, ../scss/_overrides.scss */
 .footer ul, .footer p, .footer .views-label-field-client-phone, .footer .views-label-field-client-fax, .footer .member {
   color: #ffffff;
 }
-/* line 338, ../scss/_overrides.scss */
+/* line 343, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
 }
+/* line 353, ../scss/_overrides.scss */
+.footer .form-item-name, .footer .js-form-item-pass {
+  color: #fee300;
+}
 
 @media screen and (min-width: 1400px) {
-  /* line 351, ../scss/_overrides.scss */
+  /* line 360, ../scss/_overrides.scss */
   .container {
     width: 1370px;
   }
 }
 @media screen and (min-width: 1600px) {
-  /* line 356, ../scss/_overrides.scss */
+  /* line 365, ../scss/_overrides.scss */
   .container {
     width: 1570px;
   }
 }
 @media screen and (min-width: 1900px) {
-  /* line 361, ../scss/_overrides.scss */
+  /* line 370, ../scss/_overrides.scss */
   .container {
     width: 1870px;
   }
