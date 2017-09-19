@@ -13,8 +13,13 @@ function sass_custom_form_alter(&$form, &$form_state, $form_id) {
 
     if ($form_id == 'user_login_form') {
         //Add a #markup element containing your note and make it display at the top.
+        $form['note']['#prefix'] = '<strong><p class="login-title">';
+        $form['note']['#suffix'] = '</p></strong>';
         $form['note']['#markup'] = t('Login/register:');
         $form['note']['#weight'] = -1;
+        // Adding prefix and suffix to the form.
+        //$form['edit-name']['#prefix'] = '<span class="glyphicon glyphicon-user">';
+        //$form['edit-name']['#suffix'] = '</span>';
         $form['name']['#attributes']['placeholder'] = t('User Name');
         $form['pass']['#attributes']['placeholder'] = t('Password');
      }

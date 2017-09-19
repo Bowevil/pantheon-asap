@@ -339,6 +339,10 @@ a.logo {
       color: $white;
     }
 
+  .field--name-body > p > strong, p.login-title {
+    text-transform: uppercase;
+
+  }
 
     #block-links, .block-views-blockclient-footer-block-1, .block-user-login-block {
       height: 200px;
@@ -352,11 +356,6 @@ a.logo {
 
     .form-item-name, .js-form-item-pass {
       color: $yellow;
-    }
-
-    #edit-name--2::placeholder::after {
-      display: inline-block;
-      content:"\e008";
     }
 
 
