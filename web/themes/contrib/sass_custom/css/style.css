@@ -9895,46 +9895,101 @@ a.logo img {
 /* line 331, ../scss/_overrides.scss */
 .footer {
   background-color: #001745;
+  color: #ffffff;
 }
-/* line 334, ../scss/_overrides.scss */
+/* line 335, ../scss/_overrides.scss */
+.footer #block-sass-custom-views-block-footer-logos-block-1 {
+  margin-top: -40px;
+}
+@media (max-width: 767px) {
+  /* line 340, ../scss/_overrides.scss */
+  .footer #block-links, .footer #block-sass-custom-views-block-client-footer-block-1, .footer #block-userlogin, .footer #block-sass-custom-views-block-footer-logos-block-1 {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 3px solid #fee300;
+  }
+  /* line 346, ../scss/_overrides.scss */
+  .footer .asap-logo-footer {
+    margin-top: -10px;
+    padding-bottom: 10px;
+  }
+}
+/* line 352, ../scss/_overrides.scss */
 .footer a {
   color: #fee300;
 }
-/* line 338, ../scss/_overrides.scss */
-.footer .given-name, .footer .family-name {
+/* line 357, ../scss/_overrides.scss */
+.footer .business-contact .address {
+  margin-top: -20px;
+}
+/* line 361, ../scss/_overrides.scss */
+.footer .business-contact .organization {
+  font-weight: bold;
+}
+/* line 365, ../scss/_overrides.scss */
+.footer .business-contact .given-name, .footer .business-contact .family-name {
   display: none;
 }
-/* line 342, ../scss/_overrides.scss */
-.footer ul, .footer p, .footer .views-label-field-client-phone, .footer .views-label-field-client-fax, .footer .member {
-  color: #ffffff;
+/* line 371, ../scss/_overrides.scss */
+.footer .field--name-body {
+  padding-left: 20px;
 }
-/* line 346, ../scss/_overrides.scss */
-.footer .field--name-body > p > strong, .footer p.login-title {
+/* line 376, ../scss/_overrides.scss */
+.footer .block-user-login-block p.login-title {
   text-transform: uppercase;
 }
-/* line 351, ../scss/_overrides.scss */
+/* line 384, ../scss/_overrides.scss */
+.footer .links-table .title {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+/* line 388, ../scss/_overrides.scss */
+.footer .links-table tr {
+  margin-top: 10px;
+}
+/* line 391, ../scss/_overrides.scss */
+.footer .links-table td {
+  vertical-align: top;
+}
+/* line 396, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
 }
-/* line 361, ../scss/_overrides.scss */
+@media (max-width: 767px) {
+  /* line 396, ../scss/_overrides.scss */
+  .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
+    height: auto;
+  }
+}
+/* line 410, ../scss/_overrides.scss */
 .footer .form-item-name, .footer .js-form-item-pass {
   color: #fee300;
 }
+/* line 414, ../scss/_overrides.scss */
+.footer .view-footer-logos .view-header {
+  padding-bottom: 10px;
+}
+/* line 418, ../scss/_overrides.scss */
+.footer .member {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
 
 @media screen and (min-width: 1400px) {
-  /* line 369, ../scss/_overrides.scss */
+  /* line 426, ../scss/_overrides.scss */
   .container {
     width: 1370px;
   }
 }
 @media screen and (min-width: 1600px) {
-  /* line 374, ../scss/_overrides.scss */
+  /* line 431, ../scss/_overrides.scss */
   .container {
     width: 1570px;
   }
 }
 @media screen and (min-width: 1900px) {
-  /* line 379, ../scss/_overrides.scss */
+  /* line 436, ../scss/_overrides.scss */
   .container {
     width: 1870px;
   }

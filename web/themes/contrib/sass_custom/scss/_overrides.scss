@@ -330,26 +330,74 @@ a.logo {
 
 .footer {
     background-color: $blue;
+    color: $white;
+
+    #block-sass-custom-views-block-footer-logos-block-1 {
+      margin-top: -40px;
+    }
+
+    @include breakpoint(xs) {
+      #block-links, #block-sass-custom-views-block-client-footer-block-1, #block-userlogin, #block-sass-custom-views-block-footer-logos-block-1 {
+          margin-top: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-top: 3px solid $yellow;
+      }
+      .asap-logo-footer {
+        margin-top: -10px;
+        padding-bottom: 10px;
+      }
+    }
 
     a {
       color: $yellow;
     }
 
-    .given-name, .family-name {
-      display: none;
+  .business-contact {
+      .address {
+        margin-top: -20px;
+      }
+
+      .organization {
+        font-weight: bold;
+      }
+
+      .given-name, .family-name {
+        display: none;
+      }
+
     }
 
-    ul, p, .views-label-field-client-phone, .views-label-field-client-fax, .member {
-      color: $white;
+    .field--name-body {
+      padding-left: 20px;
     }
 
-  .field--name-body > p > strong, p.login-title {
-    text-transform: uppercase;
+    .block-user-login-block {
+          p.login-title {
+            text-transform: uppercase;
+          }
+    }
 
-  }
+
+  .links-table {
+
+      .title {
+        text-transform: uppercase;
+        padding-bottom: 20px;
+      }
+      tr {
+        margin-top: 10px;
+      }
+      td {
+          vertical-align: top;
+      }
+    }
 
     #block-links, .block-views-blockclient-footer-block-1, .block-user-login-block {
-      height: 200px;
+        height: 200px;
+      @include breakpoint(xs) {
+              height: auto;
+          }
     }
 
     @include breakpoint(xs) {
@@ -358,10 +406,19 @@ a.logo {
       }
     }
 
+
     .form-item-name, .js-form-item-pass {
       color: $yellow;
     }
 
+    .view-footer-logos .view-header {
+      padding-bottom: 10px;
+    }
+
+    .member {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
 }
 
