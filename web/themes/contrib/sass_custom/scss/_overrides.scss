@@ -110,6 +110,9 @@ h4, .h4 {
 }
 
 .form-type-search {
+  @include breakpoint(xs) {
+    display: none;
+  }
   float: right;
   width: 200px;
   clear: both;
@@ -121,6 +124,9 @@ h4, .h4 {
 }
 .navbar-nav {
   float: right;
+  @include breakpoint(xs) {
+    float: left;
+  }
 }
 
 .menu.nav.navbar-nav {
