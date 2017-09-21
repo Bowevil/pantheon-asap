@@ -281,11 +281,17 @@ a.logo {
   border-left: none;
   border-right: none;
   border-radius: 0px;
+  padding-bottom: 15px; 
+  margin-top: -50px;
   @include breakpoint(xs) {
-    min-height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    margin-left: -15px;
+    margin-right: 0px;
   }
   @include breakpoint(md) {
-    min-height: 150px;
+  //  min-height: 150px;
     max-height: 150px;
   }
 
