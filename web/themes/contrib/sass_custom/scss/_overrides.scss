@@ -148,9 +148,18 @@ h4, .h4 {
   margin-top: -80px;
 }
 
+.navbar-toggle {
+    @include breakpoint(xs) {
+      margin-right: -25px;
+    }
+}
+
 a.logo {
   img {
     max-width: 800px;
+    @include breakpoint(xs) {
+      max-width: 300px;
+    }
   }
 }
 
@@ -346,6 +355,8 @@ a.logo {
       #block-links, #block-sass-custom-views-block-client-footer-block-1, #block-userlogin, #block-sass-custom-views-block-footer-logos-block-1 {
           margin-top: 10px;
           padding-top: 10px;
+          margin-left: -15px;
+          margin-right: -15px;
           padding-bottom: 10px;
           border-top: 3px solid $yellow;
       }

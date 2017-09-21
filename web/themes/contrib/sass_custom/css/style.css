@@ -9694,29 +9694,42 @@ h4, .h4 {
   margin-top: -80px;
 }
 
-/* line 152, ../scss/_overrides.scss */
+@media (max-width: 767px) {
+  /* line 151, ../scss/_overrides.scss */
+  .navbar-toggle {
+    margin-right: -25px;
+  }
+}
+
+/* line 158, ../scss/_overrides.scss */
 a.logo img {
   max-width: 800px;
 }
+@media (max-width: 767px) {
+  /* line 158, ../scss/_overrides.scss */
+  a.logo img {
+    max-width: 300px;
+  }
+}
 
-/* line 157, ../scss/_overrides.scss */
+/* line 166, ../scss/_overrides.scss */
 .page-header {
   border-bottom: none;
 }
 
-/* line 161, ../scss/_overrides.scss */
+/* line 170, ../scss/_overrides.scss */
 .main-container {
   margin-top: -50px;
   margin-left: -15px;
   margin-right: -15px;
 }
 
-/* line 167, ../scss/_overrides.scss */
+/* line 176, ../scss/_overrides.scss */
 .img-responsive {
   margin: auto;
 }
 
-/* line 173, ../scss/_overrides.scss */
+/* line 182, ../scss/_overrides.scss */
 #front-page-flexslider-plane {
   background-color: transparent;
   background-image: url("../images/bg_1920x1080.jpg");
@@ -9725,23 +9738,23 @@ a.logo img {
   border: none;
   border-bottom: 6px solid #fee300;
 }
-/* line 181, ../scss/_overrides.scss */
+/* line 190, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flexslider {
   margin: 0px;
 }
-/* line 185, ../scss/_overrides.scss */
+/* line 194, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flex-caption {
   text-transform: uppercase;
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 185, ../scss/_overrides.scss */
+  /* line 194, ../scss/_overrides.scss */
   #front-page-flexslider-plane .flex-caption {
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
-  /* line 185, ../scss/_overrides.scss */
+  /* line 194, ../scss/_overrides.scss */
   #front-page-flexslider-plane .flex-caption {
     padding-top: 0px;
     padding-left: 10px;
@@ -9749,40 +9762,40 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 185, ../scss/_overrides.scss */
+  /* line 194, ../scss/_overrides.scss */
   #front-page-flexslider-plane .flex-caption {
     padding-top: 50px;
     padding-left: 100px;
     padding-right: 50px;
   }
 }
-/* line 206, ../scss/_overrides.scss */
+/* line 215, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flex-control-nav {
   bottom: 10px;
 }
-/* line 210, ../scss/_overrides.scss */
+/* line 219, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flex-control-paging {
   z-index: 10;
 }
-/* line 212, ../scss/_overrides.scss */
+/* line 221, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flex-control-paging li a {
   background: #fee300;
 }
-/* line 215, ../scss/_overrides.scss */
+/* line 224, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flex-control-paging li a.flex-active {
   background: #fee300;
 }
-/* line 220, ../scss/_overrides.scss */
+/* line 229, ../scss/_overrides.scss */
 #front-page-flexslider-plane .flex-direction-nav {
   display: none;
 }
 
-/* line 226, ../scss/_overrides.scss */
+/* line 235, ../scss/_overrides.scss */
 .views-element-container.contextual-region.form-group {
   margin-bottom: 0px;
 }
 
-/* line 233, ../scss/_overrides.scss */
+/* line 242, ../scss/_overrides.scss */
 #block-views-block-frontpage-block-2 {
   background-image: url("../images/product_slider_background.png");
   background-size: 100% 100%;
@@ -9791,16 +9804,16 @@ a.logo img {
   border-bottom: 6px solid #001745;
 }
 
-/* line 241, ../scss/_overrides.scss */
+/* line 250, ../scss/_overrides.scss */
 #front-page-flexslider-product {
   background-color: transparent;
   border: none;
 }
-/* line 245, ../scss/_overrides.scss */
+/* line 254, ../scss/_overrides.scss */
 #front-page-flexslider-product .flex-control-nav.flex-control-paging {
   display: none;
 }
-/* line 249, ../scss/_overrides.scss */
+/* line 258, ../scss/_overrides.scss */
 #front-page-flexslider-product .views-field-body {
   width: 60%;
   text-align: center;
@@ -9808,20 +9821,20 @@ a.logo img {
   margin-right: auto;
 }
 @media (max-width: 767px) {
-  /* line 249, ../scss/_overrides.scss */
+  /* line 258, ../scss/_overrides.scss */
   #front-page-flexslider-product .views-field-body {
     width: 90%;
   }
 }
 
-/* line 260, ../scss/_overrides.scss */
+/* line 269, ../scss/_overrides.scss */
 .flexslider .slides img {
   width: auto;
   height: auto;
   margin: auto;
 }
 
-/* line 269, ../scss/_overrides.scss */
+/* line 278, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu {
   background-color: #ffffff;
   border-bottom: 6px solid #001745;
@@ -9830,20 +9843,20 @@ a.logo img {
   border-radius: 0px;
 }
 @media (max-width: 767px) {
-  /* line 269, ../scss/_overrides.scss */
+  /* line 278, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu {
     min-height: 100%;
   }
 }
 @media (min-width: 992px) {
-  /* line 269, ../scss/_overrides.scss */
+  /* line 278, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu {
     min-height: 150px;
     max-height: 150px;
   }
 }
 @media (min-width: 768px) {
-  /* line 283, ../scss/_overrides.scss */
+  /* line 292, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
     display: flex;
     padding-top: 40px;
@@ -9851,26 +9864,26 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 283, ../scss/_overrides.scss */
+  /* line 292, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu .nav {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-/* line 298, ../scss/_overrides.scss */
+/* line 307, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li {
   background-color: #0c5ecf;
 }
 @media (max-width: 767px) {
-  /* line 298, ../scss/_overrides.scss */
+  /* line 307, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     width: 100%;
     margin: 5px;
   }
 }
 @media (min-width: 768px) {
-  /* line 298, ../scss/_overrides.scss */
+  /* line 307, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
@@ -9878,7 +9891,7 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 298, ../scss/_overrides.scss */
+  /* line 307, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
@@ -9886,122 +9899,124 @@ a.logo img {
   }
 }
 @media (min-width: 1200px) {
-  /* line 298, ../scss/_overrides.scss */
+  /* line 307, ../scss/_overrides.scss */
   #block-sass-custom-calltoactionmenu li {
     flex: 1;
     /*grow*/
     margin-right: 20px;
   }
 }
-/* line 317, ../scss/_overrides.scss */
+/* line 326, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a {
   color: #ffffff;
   text-align: center;
 }
-/* line 321, ../scss/_overrides.scss */
+/* line 330, ../scss/_overrides.scss */
 #block-sass-custom-calltoactionmenu li a:hover, #block-sass-custom-calltoactionmenu li a:focus {
   background-color: #0c5ecf;
   color: #fee300;
 }
 
-/* line 337, ../scss/_overrides.scss */
+/* line 346, ../scss/_overrides.scss */
 .footer {
   background-color: #001745;
   color: #ffffff;
 }
-/* line 341, ../scss/_overrides.scss */
+/* line 350, ../scss/_overrides.scss */
 .footer #block-sass-custom-views-block-footer-logos-block-1 {
   margin-top: -40px;
 }
 @media (max-width: 767px) {
-  /* line 346, ../scss/_overrides.scss */
+  /* line 355, ../scss/_overrides.scss */
   .footer #block-links, .footer #block-sass-custom-views-block-client-footer-block-1, .footer #block-userlogin, .footer #block-sass-custom-views-block-footer-logos-block-1 {
     margin-top: 10px;
     padding-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
     padding-bottom: 10px;
     border-top: 3px solid #fee300;
   }
-  /* line 352, ../scss/_overrides.scss */
+  /* line 363, ../scss/_overrides.scss */
   .footer .asap-logo-footer {
     margin-top: -10px;
     padding-bottom: 10px;
   }
 }
-/* line 358, ../scss/_overrides.scss */
+/* line 369, ../scss/_overrides.scss */
 .footer a {
   color: #fee300;
 }
-/* line 363, ../scss/_overrides.scss */
+/* line 374, ../scss/_overrides.scss */
 .footer .business-contact .address {
   margin-top: -20px;
 }
-/* line 367, ../scss/_overrides.scss */
+/* line 378, ../scss/_overrides.scss */
 .footer .business-contact .organization {
   font-weight: bold;
 }
-/* line 371, ../scss/_overrides.scss */
+/* line 382, ../scss/_overrides.scss */
 .footer .business-contact .given-name, .footer .business-contact .family-name {
   display: none;
 }
-/* line 377, ../scss/_overrides.scss */
+/* line 388, ../scss/_overrides.scss */
 .footer .field--name-body {
   padding-left: 20px;
 }
-/* line 382, ../scss/_overrides.scss */
+/* line 393, ../scss/_overrides.scss */
 .footer .block-user-login-block p.login-title {
   text-transform: uppercase;
 }
-/* line 390, ../scss/_overrides.scss */
+/* line 401, ../scss/_overrides.scss */
 .footer .links-table .title {
   text-transform: uppercase;
   padding-bottom: 20px;
 }
-/* line 394, ../scss/_overrides.scss */
+/* line 405, ../scss/_overrides.scss */
 .footer .links-table tr {
   margin-top: 10px;
 }
-/* line 397, ../scss/_overrides.scss */
+/* line 408, ../scss/_overrides.scss */
 .footer .links-table td {
   vertical-align: top;
 }
-/* line 402, ../scss/_overrides.scss */
+/* line 413, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
 }
 @media (max-width: 767px) {
-  /* line 402, ../scss/_overrides.scss */
+  /* line 413, ../scss/_overrides.scss */
   .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
     height: auto;
   }
 }
-/* line 416, ../scss/_overrides.scss */
+/* line 427, ../scss/_overrides.scss */
 .footer .form-item-name, .footer .js-form-item-pass {
   color: #fee300;
 }
-/* line 420, ../scss/_overrides.scss */
+/* line 431, ../scss/_overrides.scss */
 .footer .view-footer-logos .view-header {
   padding-bottom: 10px;
 }
-/* line 424, ../scss/_overrides.scss */
+/* line 435, ../scss/_overrides.scss */
 .footer .member {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 @media screen and (min-width: 1400px) {
-  /* line 432, ../scss/_overrides.scss */
+  /* line 443, ../scss/_overrides.scss */
   .container {
     width: 1370px;
   }
 }
 @media screen and (min-width: 1600px) {
-  /* line 437, ../scss/_overrides.scss */
+  /* line 448, ../scss/_overrides.scss */
   .container {
     width: 1570px;
   }
 }
 @media screen and (min-width: 1900px) {
-  /* line 442, ../scss/_overrides.scss */
+  /* line 453, ../scss/_overrides.scss */
   .container {
     width: 1870px;
   }
