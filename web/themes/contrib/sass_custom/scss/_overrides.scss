@@ -18,18 +18,6 @@
 // jQuery UI style overrides.
 @import "jquery-ui/autocomplete";
 
-
-// Google fonts.
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
-
-$text-color:  $gray-dark !default;
-$navbar-default-bg: #001745;
-$white: #ffffff;
-$black: #000000;
-$yellow: #fee300;
-$blue: #001745;
-
 ol, ul {
   padding-left: 1.5em;
   .popover &:last-child {
@@ -361,8 +349,34 @@ a.logo {
     margin-right: 15px;
   }
 
+  #edit-purchased-entity-wrapper {
+    display: none;
+  }
+
 }
 
+.product-listing {
+  border: 1px solid $gray;
+}
+
+.product-btn {
+      clear: both;
+      background-color: $blue;
+      padding: 7px 13px;
+      border-right: 1px solid $yellow;
+      border-radius: 4px;
+      float: left;
+      a{
+        color: $yellow;
+        text-transform: uppercase;
+      }
+}
+
+.btn {
+    a:hover, a:focus {
+        text-decoration: underline;
+    }
+}
 
 
 // Footer
