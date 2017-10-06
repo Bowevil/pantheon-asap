@@ -183,6 +183,18 @@ a.logo {
     margin: auto;
   }
 
+.breadcrumb {
+    margin-top: -50px;
+    color: $white;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+    a {
+      color: $white;
+    }
+}
+
+
 // front page slideshow
 
 #front-page-flexslider-plane {
@@ -354,6 +366,7 @@ a.logo {
 .path-products {
   .page-header {
       @include breakpoint(xs) {
+        padding-top: 20px;
         margin-top: 30px;
         min-height: 30px;
       }
