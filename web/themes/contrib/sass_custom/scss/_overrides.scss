@@ -107,6 +107,10 @@ h4, .h4 {
   margin-right: -15px;
 }
 
+.navbar-nav li {
+  text-transform: uppercase;
+}
+
 .form-type-search {
   @include breakpoint(xs) {
     display: none;
@@ -166,7 +170,6 @@ a.logo {
   }
 }
 
-
 .main-container {
   min-height: 300px;
   margin-top: -50px;
@@ -192,6 +195,25 @@ a.logo {
     a {
       color: $white;
     }
+}
+
+.page-node-type-article {
+  .page-header {
+      @include breakpoint(xs) {
+        padding-top: 20px;
+        margin-top: 30px;
+        min-height: 30px;
+      }
+      @include breakpoint(md) {
+        padding-top: 40px;
+        margin-top: 30px;
+        min-height: 100px;
+      }
+    background-color: transparent;
+    background-image: url("../images/inside_header_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 
@@ -380,7 +402,6 @@ a.logo {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-
 }
 
 // Store icon
@@ -436,6 +457,73 @@ a.logo {
 }
 
 
+//News Videos page
+.path-news-videos {
+  .page-header {
+      @include breakpoint(xs) {
+        padding-top: 20px;
+        margin-top: 30px;
+        min-height: 30px;
+      }
+      @include breakpoint(md) {
+        padding-top: 40px;
+        margin-top: 30px;
+        min-height: 100px;
+      }
+    background-color: transparent;
+    background-image: url("../images/inside_header_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .asap-news {
+    border-top: 1px solid $gray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .group-left {
+      height: 200px;
+      @include breakpoint(xs) {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .field--name-node-post-date::before {
+      display: inline-block;
+      padding-right: 5px;
+      font-family: "Glyphicons Halflings";
+      //font-size: 20px;
+      content:"\e109";
+    }
+
+
+    .group-right {
+      @include breakpoint(xs) {
+        float: none;
+        width: 100%;
+      }
+    }
+    .news-btn {
+          clear: both;
+          background-color: $blue;
+          padding: 7px 13px;
+          border-right: 1px;
+          border-radius: 4px;
+          float: right;
+    }
+
+    a {
+      color: $yellow;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      color: $yellow;
+    }
+  }
+}
+
+
+
 // Footer
 
 .footer {
@@ -466,8 +554,20 @@ a.logo {
     }
 
   .business-contact {
+
+    .address-line1::before {
+      display: inline-block;
+      width: 20px;
+      padding-top: 15px;
+      padding-right: 5px;
+      font-family: "Glyphicons Halflings";
+      //font-size: 20px;
+      content:"\e062";
+    }
+
       .address {
         margin-top: -20px;
+        padding-bottom: 15px;
       }
 
       .organization {
@@ -478,7 +578,32 @@ a.logo {
         display: none;
       }
 
-    }
+      .locality {
+        padding-left: 20px;
+      }
+      .country {
+        display: none;
+      }
+      .contact::before {
+        display: inline-block;
+        width: 20px;
+        padding-right: 5px;
+        font-family: "Glyphicons Halflings";
+        //font-size: 20px;
+        content:"\e182";
+      }
+      .phone {
+        padding-left: 20px;
+      }
+      .fax {
+        padding-left: 20px;
+        padding-bottom: 15px;
+      }
+      .email {
+        padding-bottom: 15px;
+      }
+
+}
 
     .field--name-body {
       padding-left: 20px;

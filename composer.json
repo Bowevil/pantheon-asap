@@ -25,6 +25,7 @@
         "drupal/console": "^1.0.0-rc8",
         "drupal/core": "^8",
         "drupal/devel": "^1.0",
+        "drupal/ds": "^3.1",
         "drupal/easy_breadcrumb": "^1.6",
         "drupal/fancy_login": "^2.2",
         "drupal/search_kint": "^1.0",
