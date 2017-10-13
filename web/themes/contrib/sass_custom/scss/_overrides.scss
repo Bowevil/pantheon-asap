@@ -147,6 +147,10 @@ h4, .h4 {
   }
 }
 
+.sass-main-menu {
+  right: -125px;
+}
+
 .navbar-header {
   width: 100%;
 }
@@ -406,6 +410,7 @@ a.logo {
 
 // Store icon
 .cart--cart-block {
+  white-space: nowrap;
   margin-top: -60px;
 }
 
@@ -456,7 +461,6 @@ a.logo {
     }
 }
 
-
 //News Videos page
 .path-news-videos {
   .page-header {
@@ -476,15 +480,32 @@ a.logo {
     background-repeat: no-repeat;
   }
 
-  .asap-news {
-    border-top: 1px solid $gray;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .news-video-row {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: 1px solid $gray;
+    padding-top: 25px;
+    padding-bottom: 25px;
     .group-left {
       height: 200px;
       @include breakpoint(xs) {
         float: none;
         width: 100%;
+      }
+
+      .group-left:nth-child(odd) {
+          background-color: red;
+      }
+
+      .group-left:nth-child(even) {
+          background-color: blue;
+      }
+    }
+
+    .field--name-field-image {
+        float: right;
+      @include breakpoint(xs) {
+        float: none;
       }
     }
 
@@ -520,6 +541,10 @@ a.logo {
       color: $yellow;
     }
   }
+}
+
+.news-video-row:last-of-type {
+  border-bottom: 1px solid $white;
 }
 
 
