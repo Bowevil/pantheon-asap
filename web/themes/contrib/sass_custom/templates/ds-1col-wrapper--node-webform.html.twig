@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column wrapper template.
+ *
+ * Available variables:
+ * - outer_wrapper: outer wrapper element
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: outer wrapper attributes
+ * - ds_content_attributes: attributes for ds_content region
+ * - ds_content: content of ds_content region
+ */
+#}
+<{{ outer_wrapper }}{{ attributes.addClass('ds-1col', 'container-fluid', 'asap-contact-us', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+<div class="col-sm-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2">
+  <{{ ds_content_wrapper }}{{ ds_content_attributes }}>
+    {{ ds_content }}
+  </{{ ds_content_wrapper }}>
+</div>
+</{{ outer_wrapper }}>

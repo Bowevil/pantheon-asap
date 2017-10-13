@@ -154,7 +154,7 @@ h4, .h4 {
   @include breakpoint(md) {
     position: relative;
     right: -125px;
-  }  
+  }
 }
 
 .navbar-header {
@@ -551,6 +551,48 @@ a.logo {
 
 .news-video-row:last-of-type {
   border-bottom: 1px solid $white;
+}
+
+// Contact us page-header
+.page-node-type-webform {
+  .page-header {
+      @include breakpoint(xs) {
+        padding-top: 20px;
+        margin-top: 30px;
+        min-height: 30px;
+      }
+      @include breakpoint(md) {
+        padding-top: 40px;
+        margin-top: 30px;
+        min-height: 100px;
+      }
+    background-color: transparent;
+    background-image: url("../images/inside_header_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+    .webform-info {
+      padding-bottom: 15px;
+    }
+    .form-item-name {
+      margin-left: -15px;
+    }
+    @include breakpoint(xs) {
+      .form-item-phone {
+        margin-left: -15px;      
+      }
+    }
+    .form-email {
+      margin-left: -15px;
+    }
+    .form-item-company-name {
+      margin-left: -15px;
+    }
+    .form-item-message {
+      margin-left: -15px;
+    }
+
 }
 
 
