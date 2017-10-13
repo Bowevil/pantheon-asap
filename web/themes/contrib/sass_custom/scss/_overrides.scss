@@ -148,7 +148,13 @@ h4, .h4 {
 }
 
 .sass-main-menu {
-  right: -125px;
+  @include breakpoint(sm) {
+    position: relative;
+  }
+  @include breakpoint(md) {
+    position: relative;
+    right: -125px;
+  }  
 }
 
 .navbar-header {
