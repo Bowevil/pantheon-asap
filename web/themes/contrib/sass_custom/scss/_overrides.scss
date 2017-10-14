@@ -69,6 +69,10 @@ body {
   background-color: $white;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 h1, .h1 {
 font-size: 58px;
   @include breakpoint(xs) {
@@ -764,16 +768,16 @@ a.logo {
 
 @media screen and (min-width: 1400px) {
   .container {
-    width: 1370px;
+    //width: 1370px;
   }
 }
 @media screen and (min-width: 1600px) {
   .container {
-    width: 1570px;
+    //width: 1570px;
   }
 }
 @media screen and (min-width: 1900px) {
   .container {
-    width: 1870px;
+  //  width: 1870px;
   }
 }
