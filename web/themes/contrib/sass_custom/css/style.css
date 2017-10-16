@@ -10085,7 +10085,7 @@ a.logo img {
   text-decoration: underline;
 }
 
-/* line 486, ../scss/_overrides.scss */
+/* line 487, ../scss/_overrides.scss */
 .path-news-videos .page-header {
   background-color: transparent;
   background-image: url("../images/inside_header_background.jpg");
@@ -10093,7 +10093,7 @@ a.logo img {
   background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
-  /* line 486, ../scss/_overrides.scss */
+  /* line 487, ../scss/_overrides.scss */
   .path-news-videos .page-header {
     padding-top: 20px;
     margin-top: 30px;
@@ -10101,14 +10101,18 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 486, ../scss/_overrides.scss */
+  /* line 487, ../scss/_overrides.scss */
   .path-news-videos .page-header {
     padding-top: 40px;
     margin-top: 30px;
     min-height: 100px;
   }
 }
-/* line 503, ../scss/_overrides.scss */
+/* line 508, ../scss/_overrides.scss */
+.path-news-videos .news-video-row:nth-child(even) .group-left {
+  float: right;
+}
+/* line 513, ../scss/_overrides.scss */
 .path-news-videos .news-video-row {
   margin-left: 15px;
   margin-right: 15px;
@@ -10116,36 +10120,28 @@ a.logo img {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-/* line 509, ../scss/_overrides.scss */
+/* line 519, ../scss/_overrides.scss */
 .path-news-videos .news-video-row .group-left {
   height: 200px;
 }
 @media (max-width: 767px) {
-  /* line 509, ../scss/_overrides.scss */
+  /* line 519, ../scss/_overrides.scss */
   .path-news-videos .news-video-row .group-left {
     float: none;
     width: 100%;
   }
 }
-/* line 516, ../scss/_overrides.scss */
-.path-news-videos .news-video-row .group-left .group-left:nth-child(odd) {
-  background-color: red;
-}
-/* line 520, ../scss/_overrides.scss */
-.path-news-videos .news-video-row .group-left .group-left:nth-child(even) {
-  background-color: blue;
-}
-/* line 525, ../scss/_overrides.scss */
+/* line 527, ../scss/_overrides.scss */
 .path-news-videos .news-video-row .field--name-field-image {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 525, ../scss/_overrides.scss */
+  /* line 527, ../scss/_overrides.scss */
   .path-news-videos .news-video-row .field--name-field-image {
     float: none;
   }
 }
-/* line 532, ../scss/_overrides.scss */
+/* line 534, ../scss/_overrides.scss */
 .path-news-videos .news-video-row .field--name-node-post-date::before {
   display: inline-block;
   padding-right: 5px;
@@ -10153,13 +10149,13 @@ a.logo img {
   content: "\e109";
 }
 @media (max-width: 767px) {
-  /* line 541, ../scss/_overrides.scss */
+  /* line 543, ../scss/_overrides.scss */
   .path-news-videos .news-video-row .group-right {
     float: none;
     width: 100%;
   }
 }
-/* line 547, ../scss/_overrides.scss */
+/* line 549, ../scss/_overrides.scss */
 .path-news-videos .news-video-row .news-btn {
   clear: both;
   background-color: #001745;
@@ -10168,22 +10164,22 @@ a.logo img {
   border-radius: 4px;
   float: right;
 }
-/* line 556, ../scss/_overrides.scss */
+/* line 558, ../scss/_overrides.scss */
 .path-news-videos .news-video-row a {
   color: #fee300;
 }
-/* line 559, ../scss/_overrides.scss */
+/* line 561, ../scss/_overrides.scss */
 .path-news-videos .news-video-row a:hover, .path-news-videos .news-video-row a:focus {
   text-decoration: underline;
   color: #fee300;
 }
 
-/* line 566, ../scss/_overrides.scss */
+/* line 568, ../scss/_overrides.scss */
 .news-video-row:last-of-type {
   border-bottom: 1px solid #ffffff;
 }
 
-/* line 573, ../scss/_overrides.scss */
+/* line 575, ../scss/_overrides.scss */
 .page-node-type-webform .page-header {
   background-color: transparent;
   background-image: url("../images/inside_header_background.jpg");
@@ -10191,7 +10187,7 @@ a.logo img {
   background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
-  /* line 573, ../scss/_overrides.scss */
+  /* line 575, ../scss/_overrides.scss */
   .page-node-type-webform .page-header {
     padding-top: 20px;
     margin-top: 30px;
@@ -10199,19 +10195,19 @@ a.logo img {
   }
 }
 @media (min-width: 992px) {
-  /* line 573, ../scss/_overrides.scss */
+  /* line 575, ../scss/_overrides.scss */
   .page-node-type-webform .page-header {
     padding-top: 40px;
     margin-top: 30px;
     min-height: 100px;
   }
 }
-/* line 590, ../scss/_overrides.scss */
+/* line 592, ../scss/_overrides.scss */
 .page-node-type-webform .webform-frame {
   background-color: #ffffff;
   opacity: 0.9;
 }
-/* line 595, ../scss/_overrides.scss */
+/* line 597, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us {
   margin-top: -26px;
   background-color: transparent;
@@ -10219,53 +10215,53 @@ a.logo img {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-/* line 601, ../scss/_overrides.scss */
+/* line 603, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us .webform-info {
   padding-bottom: 15px;
 }
-/* line 604, ../scss/_overrides.scss */
+/* line 606, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us .form-item-name {
   margin-left: -15px;
 }
 @media (max-width: 767px) {
-  /* line 608, ../scss/_overrides.scss */
+  /* line 610, ../scss/_overrides.scss */
   .page-node-type-webform .asap-contact-us .form-item-phone {
     margin-left: -15px;
   }
 }
-/* line 612, ../scss/_overrides.scss */
+/* line 614, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us .form-email {
   margin-left: -15px;
 }
-/* line 615, ../scss/_overrides.scss */
+/* line 617, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us .form-item-company-name {
   margin-left: -15px;
 }
-/* line 618, ../scss/_overrides.scss */
+/* line 620, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us .form-item-message {
   margin-left: -15px;
 }
-/* line 621, ../scss/_overrides.scss */
+/* line 623, ../scss/_overrides.scss */
 .page-node-type-webform .asap-contact-us .form-actions {
   clear: both;
   padding-top: 15px;
 }
-/* line 626, ../scss/_overrides.scss */
+/* line 628, ../scss/_overrides.scss */
 .page-node-type-webform #block-views-block-client-call-us-block {
   text-align: center;
 }
 
-/* line 636, ../scss/_overrides.scss */
+/* line 638, ../scss/_overrides.scss */
 .footer {
   background-color: #001745;
   color: #ffffff;
 }
-/* line 640, ../scss/_overrides.scss */
+/* line 642, ../scss/_overrides.scss */
 .footer #block-sass-custom-views-block-footer-logos-block-1 {
   margin-top: -40px;
 }
 @media (max-width: 767px) {
-  /* line 645, ../scss/_overrides.scss */
+  /* line 647, ../scss/_overrides.scss */
   .footer #block-links, .footer #block-sass-custom-views-block-client-footer-block-1, .footer #block-userlogin, .footer #block-sass-custom-views-block-footer-logos-block-1 {
     margin-top: 10px;
     padding-top: 10px;
@@ -10274,17 +10270,17 @@ a.logo img {
     padding-bottom: 10px;
     border-top: 3px solid #fee300;
   }
-  /* line 653, ../scss/_overrides.scss */
+  /* line 655, ../scss/_overrides.scss */
   .footer .asap-logo-footer {
     margin-top: -10px;
     padding-bottom: 10px;
   }
 }
-/* line 659, ../scss/_overrides.scss */
+/* line 661, ../scss/_overrides.scss */
 .footer a {
   color: #fee300;
 }
-/* line 665, ../scss/_overrides.scss */
+/* line 667, ../scss/_overrides.scss */
 .footer .business-contact .address-line1::before {
   display: inline-block;
   width: 20px;
@@ -10293,28 +10289,28 @@ a.logo img {
   font-family: "Glyphicons Halflings";
   content: "\e062";
 }
-/* line 675, ../scss/_overrides.scss */
+/* line 677, ../scss/_overrides.scss */
 .footer .business-contact .address {
   margin-top: -20px;
   padding-bottom: 15px;
 }
-/* line 680, ../scss/_overrides.scss */
+/* line 682, ../scss/_overrides.scss */
 .footer .business-contact .organization {
   font-weight: bold;
 }
-/* line 684, ../scss/_overrides.scss */
+/* line 686, ../scss/_overrides.scss */
 .footer .business-contact .given-name, .footer .business-contact .family-name {
   display: none;
 }
-/* line 688, ../scss/_overrides.scss */
+/* line 690, ../scss/_overrides.scss */
 .footer .business-contact .locality {
   padding-left: 20px;
 }
-/* line 691, ../scss/_overrides.scss */
+/* line 693, ../scss/_overrides.scss */
 .footer .business-contact .country {
   display: none;
 }
-/* line 694, ../scss/_overrides.scss */
+/* line 696, ../scss/_overrides.scss */
 .footer .business-contact .contact::before {
   display: inline-block;
   width: 20px;
@@ -10322,59 +10318,59 @@ a.logo img {
   font-family: "Glyphicons Halflings";
   content: "\e182";
 }
-/* line 702, ../scss/_overrides.scss */
+/* line 704, ../scss/_overrides.scss */
 .footer .business-contact .phone {
   padding-left: 20px;
 }
-/* line 705, ../scss/_overrides.scss */
+/* line 707, ../scss/_overrides.scss */
 .footer .business-contact .fax {
   padding-left: 20px;
   padding-bottom: 15px;
 }
-/* line 709, ../scss/_overrides.scss */
+/* line 711, ../scss/_overrides.scss */
 .footer .business-contact .email {
   padding-bottom: 15px;
 }
-/* line 715, ../scss/_overrides.scss */
+/* line 717, ../scss/_overrides.scss */
 .footer .field--name-body {
   padding-left: 20px;
 }
-/* line 720, ../scss/_overrides.scss */
+/* line 722, ../scss/_overrides.scss */
 .footer .block-user-login-block p.login-title {
   text-transform: uppercase;
 }
-/* line 728, ../scss/_overrides.scss */
+/* line 730, ../scss/_overrides.scss */
 .footer .links-table .title {
   text-transform: uppercase;
   padding-bottom: 20px;
 }
-/* line 732, ../scss/_overrides.scss */
+/* line 734, ../scss/_overrides.scss */
 .footer .links-table tr {
   margin-top: 10px;
 }
-/* line 735, ../scss/_overrides.scss */
+/* line 737, ../scss/_overrides.scss */
 .footer .links-table td {
   vertical-align: top;
 }
-/* line 740, ../scss/_overrides.scss */
+/* line 742, ../scss/_overrides.scss */
 .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
   height: 200px;
 }
 @media (max-width: 767px) {
-  /* line 740, ../scss/_overrides.scss */
+  /* line 742, ../scss/_overrides.scss */
   .footer #block-links, .footer .block-views-blockclient-footer-block-1, .footer .block-user-login-block {
     height: auto;
   }
 }
-/* line 754, ../scss/_overrides.scss */
+/* line 756, ../scss/_overrides.scss */
 .footer .form-item-name, .footer .js-form-item-pass {
   color: #fee300;
 }
-/* line 758, ../scss/_overrides.scss */
+/* line 760, ../scss/_overrides.scss */
 .footer .view-footer-logos .view-header {
   padding-bottom: 10px;
 }
-/* line 762, ../scss/_overrides.scss */
+/* line 764, ../scss/_overrides.scss */
 .footer .member {
   text-transform: uppercase;
   margin-bottom: 10px;
