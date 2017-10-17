@@ -147,7 +147,7 @@ h4, .h4 {
   @include breakpoint(md) {
     position: absolute;
     top: 85px;
-    right: 125px;
+    right: 80px;
   }
 }
 
@@ -157,7 +157,7 @@ h4, .h4 {
   }
   @include breakpoint(md) {
     position: relative;
-    right: -125px;
+    right: -80px;
   }
 }
 
@@ -771,12 +771,6 @@ a.logo {
       @include breakpoint(xs) {
               height: auto;
           }
-    }
-
-    @include breakpoint(xs) {
-      .col-1, .col-2, .col-3 > .views-field-field-image-departments {
-        //display: none;
-      }
     }
 
 

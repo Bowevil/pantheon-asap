@@ -9707,7 +9707,7 @@ h4, .h4 {
   .menu.nav.navbar-nav {
     position: absolute;
     top: 85px;
-    right: 125px;
+    right: 80px;
   }
 }
 
@@ -9721,7 +9721,7 @@ h4, .h4 {
   /* line 154, ../scss/_overrides.scss */
   .sass-main-menu {
     position: relative;
-    right: -125px;
+    right: -80px;
   }
 }
 
@@ -10386,15 +10386,15 @@ a.logo img {
     height: auto;
   }
 }
-/* line 783, ../scss/_overrides.scss */
+/* line 777, ../scss/_overrides.scss */
 .footer .form-item-name, .footer .js-form-item-pass {
   color: #fee300;
 }
-/* line 787, ../scss/_overrides.scss */
+/* line 781, ../scss/_overrides.scss */
 .footer .view-footer-logos .view-header {
   padding-bottom: 10px;
 }
-/* line 791, ../scss/_overrides.scss */
+/* line 785, ../scss/_overrides.scss */
 .footer .member {
   text-transform: uppercase;
   margin-bottom: 10px;
