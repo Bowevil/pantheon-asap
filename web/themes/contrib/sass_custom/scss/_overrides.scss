@@ -483,6 +483,15 @@ a.logo {
 
 //News Videos page
 
+.ds-2col-fluid {
+      @include breakpoint(xs) {
+      }
+      @include breakpoint(md) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+}
+
 .path-news-videos {
   .page-header {
       @include breakpoint(xs) {
@@ -502,11 +511,28 @@ a.logo {
   }
 
   .news-video-row:nth-child(odd) {
+    @include breakpoint(xs) {
+    }
+    @include breakpoint(md) {
+      .group-left {
+           display: flex;
+           justify-content:flex-start;
+         }
+    }
   }
 
   .news-video-row:nth-child(even) {
-    .group-left {
-      float: right;
+    @include breakpoint(xs) {
+    }
+    @include breakpoint(md) {
+      .group-left {
+           display: flex;
+           justify-content:flex-start;
+           float: right;
+         }
+         .group-right {
+           text-align: left;
+         }
     }
   }
 
@@ -549,6 +575,7 @@ a.logo {
     .news-btn {
           clear: both;
           background-color: $blue;
+          margin-top: 15px;
           padding: 7px 13px;
           border-right: 1px;
           border-radius: 4px;
