@@ -103,6 +103,11 @@ h4, .h4 {
   color: $blue;
 }
 
+h5, .h5 {
+  font-size: 18px;
+  color: $blue;
+}
+
 .navbar-collapse.collapse {
   background-color: $blue;
   border-top: 1px solid #fee300;
@@ -444,6 +449,21 @@ a.logo {
   padding-left: 5px;
 }
 
+// Store Sort and Filter block
+
+#block-exposed-form-productspage-sort {
+  //border-right: 1px solid $gray;
+}
+
+.bef-exposed-form .form--inline .form-item {
+  float: left;
+  clear: both;
+}
+
+legend {
+  padding-top: 15px;
+}
+
 
 // Store unregestered user
 
@@ -481,7 +501,19 @@ a.logo {
     }
 }
 
-//News Videos page
+
+//News Videos page node view
+.article-left > .field--name-node-post-date::before {
+  display: inline-block;
+  padding-right: 5px;
+  font-family: "Glyphicons Halflings";
+  //font-size: 20px;
+  content:"\e109";
+}
+
+
+
+//News Videos page list view
 
 .ds-2col-fluid {
       @include breakpoint(xs) {
