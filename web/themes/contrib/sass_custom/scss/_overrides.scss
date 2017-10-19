@@ -65,13 +65,16 @@ p:last-child,
   }
 }
 
-body {
-  background-color: $white;
+html, body {
+overflow-x: hidden;
+height: 100%;
 }
 
-html, body {
-  overflow-x: hidden;
+#page-wrapper,
+.region-bottom {
+min-height: 100%;
 }
+
 
 h1, .h1 {
 font-size: 58px;
@@ -719,7 +722,49 @@ legend {
 
 }
 
+// About Us page
 
+.path-about-us {
+  margin-top: -26px;
+  background-color: transparent;
+  background-image: url("../images/about_us_1920x1080.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  .page-header {
+      @include breakpoint(xs) {
+        padding-top: 20px;
+        margin-top: 30px;
+        min-height: 30px;
+      }
+      @include breakpoint(md) {
+        padding-top: 40px;
+        margin-top: 30px;
+        min-height: 100px;
+      }
+    background-color: transparent;
+    background-image: url("../images/inside_header_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .page-frame {
+    min-height: 300px;
+    padding: 25px;
+    background-color: $white;
+    opacity: 0.9;
+  }
+
+.about-us {
+  background-color: $white;
+}
+
+.about-us-items {
+    padding-top: 25px;
+    padding-bottom: 25px;    
+}
+
+}
 
 // Footer
 
