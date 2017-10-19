@@ -67,14 +67,8 @@ p:last-child,
 
 html, body {
 overflow-x: hidden;
-height: 100%;
+//height: 100%;
 }
-
-#page-wrapper,
-.region-bottom {
-min-height: 100%;
-}
-
 
 h1, .h1 {
 font-size: 58px;
@@ -720,6 +714,10 @@ legend {
     text-align: center;
   }
 
+  .business-contact {
+    padding-bottom: 25px;
+  }
+
 }
 
 // About Us page
@@ -749,20 +747,28 @@ legend {
   }
 
   .page-frame {
+    margin-top: -25px;
     min-height: 300px;
     padding: 25px;
     background-color: $white;
     opacity: 0.9;
   }
 
-.about-us {
-  background-color: $white;
-}
+  .page-header {
+    border-bottom: none;
+  }
 
-.about-us-items {
-    padding-top: 25px;
-    padding-bottom: 25px;    
-}
+  .about-us {
+    background-color: $white;
+  }
+
+  .about-us-items {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      .views-field-field-image-departments {
+        min-height: 250px;
+      }
+  }
 
 }
 
@@ -771,6 +777,7 @@ legend {
 .footer {
     background-color: $blue;
     color: $white;
+    margin-top: 0px;
 
     #block-sass-custom-views-block-footer-logos-block-1 {
       margin-top: -40px;
@@ -878,7 +885,6 @@ legend {
               height: auto;
           }
     }
-
 
     .form-item-name, .js-form-item-pass {
       color: $yellow;
