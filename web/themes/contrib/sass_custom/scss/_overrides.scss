@@ -213,7 +213,11 @@ a.logo {
 
 .img-responsive {
     margin: auto;
+    display: block;
+    width: 100%;
+    height: auto;
   }
+
 
 .breadcrumb {
     margin-top: -50px;
@@ -503,14 +507,40 @@ legend {
 
 
 //News Videos page node view
-.article-left > .field--name-node-post-date::before {
-  display: inline-block;
-  padding-right: 5px;
-  font-family: "Glyphicons Halflings";
-  //font-size: 20px;
-  content:"\e109";
-}
 
+.page-node-type-article {
+
+  .article-left > .field--name-node-post-date::before {
+    display: inline-block;
+    padding-right: 5px;
+    font-family: "Glyphicons Halflings";
+    //font-size: 20px;
+    content:"\e109";
+  }
+    .field--name-node-title {
+      float: left;
+    }
+    img {
+      float: left;
+      padding-bottom: 25px;
+      padding-right: 15px;
+    }
+    .field--name-body {
+      clear: both;
+    }
+
+  .field--name-dynamic-block-fieldnode-latest-news-field-block {
+      padding-top: 80px;
+    @include breakpoint(xs) {
+      padding-top: 25px;
+    }
+  }
+  .node--view-mode-block-latest-news-view {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+}
 
 
 //News Videos page list view
@@ -575,7 +605,6 @@ legend {
     padding-top: 25px;
     padding-bottom: 25px;
     .group-left {
-      height: 200px;
       @include breakpoint(xs) {
         float: none;
         width: 100%;

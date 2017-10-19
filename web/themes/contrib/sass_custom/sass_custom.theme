@@ -42,3 +42,23 @@ function sass_custom_form_alter(&$form, &$form_state, $form_id) {
   //  $form['subject']['#type'] = 'hidden';
   //  $form['subject']['#value'] = t('Contact Form Submission');
   }
+
+  function sass_custom_preprocess_page_title(&$variables) {
+
+    // Load the node entity from current route
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+
+      // Load the label of the bundle
+      $bundle_label = \Drupal::entityTypeManager()
+        ->getStorage('node_type')
+        ->load($node->bundle())
+        ->label();
+
+      // Set the page title
+      //$variables['title'] = $bundle_label;
+
+      if ($bundle_label = "article") {
+        $variables['title'] = 'NEWS/VIDEO';
+      }
+    }
+  }
