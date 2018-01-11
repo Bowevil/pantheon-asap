@@ -29,7 +29,6 @@
         "drupal/ds": "^3.1",
         "drupal/easy_breadcrumb": "^1.6",
         "drupal/fancy_login": "^2.2",
-        "drupal/fullcalendar": "1.x-dev",
         "drupal/pathauto": "^1.0",
         "drupal/rng": "1.x-dev",
         "drupal/search_kint": "^1.0",
