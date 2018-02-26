@@ -543,6 +543,28 @@ legend {
 
 }
 
+// schedule 
+
+.path-scheduled-pickup-event {
+  .page-header {
+      @include breakpoint(xs) {
+        padding-top: 20px;
+        margin-top: 30px;
+        min-height: 30px;
+      }
+      @include breakpoint(md) {
+        padding-top: 40px;
+        margin-top: 30px;
+        min-height: 100px;
+      }
+    background-color: transparent;
+    background-image: url("../images/inside_header_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+
 
 //News Videos page list view
 
