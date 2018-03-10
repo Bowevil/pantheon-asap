@@ -55,6 +55,10 @@ p:last-child,
   }
 }
 
+.form-control {
+  color: $black;
+}
+
 .help-block, .control-group .help-inline {
   color: $gray-light;
   font-size: 12px;
@@ -543,7 +547,7 @@ legend {
 
 }
 
-// serviceable parts searc 
+// serviceable parts search 
 
 .path-serviceable-parts-search {
   .page-header {
@@ -703,7 +707,7 @@ legend {
 }
 
 // Contact us page-header
-.page-node-type-webform {
+.page-node-type-webform  {
 
   .page-header {
       @include breakpoint(xs) {
@@ -713,9 +717,14 @@ legend {
       }
       @include breakpoint(md) {
         padding-top: 40px;
-        margin-top: 30px;
+        margin-top: -10px;
         min-height: 100px;
       }
+      @include breakpoint(lg) {
+        padding-top: 20px;
+        margin-top: 0px;
+        min-height: 100px;
+      }    
     background-color: transparent;
     background-image: url("../images/inside_header_background.jpg");
     background-size: 100% 100%;
