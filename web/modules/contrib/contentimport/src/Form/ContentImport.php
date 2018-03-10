@@ -338,9 +338,19 @@ class ContentImport extends ConfigFormBase {
               case 'entity_reference':
                 $logVariationFields .= "Importing Reference Type (" . $fieldSettings[$f]['target_type'] . ") :: ";
                 if ($fieldSettings[$f]['target_type'] == 'taxonomy_term') {
-                  $reference = explode(":", $data[$keyIndex[$fieldNames[$f]]]);
-                  if (is_array($reference) && $reference[0] != '') {
-                    $terms = ContentImport::getTermReference($reference[0], $reference[1]);
+                  $target_bundles = $fieldSettings[$f]['handler_settings']['target_bundles'];
+                  // If vocabulary field settings target is single, assume it.
+                  if (count($target_bundles) == 1 && !empty($data[$keyIndex[$fieldNames[$f]]])) {
+                    $terms = ContentImport::getTermReference($target_bundles[key($target_bundles)], $data[$keyIndex[$fieldNames[$f]]]);
+                  }
+                  // If not, assume vocabulary is added with ":" delimiter.
+                  else {
+                    $reference = explode(":", $data[$keyIndex[$fieldNames[$f]]]);
+                    if (is_array($reference) && $reference[0] != '') {
+                      $terms = ContentImport::getTermReference($reference[0], $reference[1]);
+                    }
+                  }
+                  if (!empty($terms)) {
                     $nodeArray[$fieldNames[$f]] = $terms;
                   }
                 }

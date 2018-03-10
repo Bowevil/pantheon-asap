@@ -1,0 +1,44 @@
+diff --git a/README.txt b/README.txt
+index 2167fca..a8ebd1d 100755
+--- a/README.txt
++++ b/README.txt
+@@ -66,7 +66,11 @@ For Image field - upload all the images
+ 
+ For Entity Reference field(Taxonomy) - put the data as Vocabulary: term1, term2
+ 	If the Vocabulary or Term is not exists it will create automatically.
+-	Eg: fruits:apple:orange
++	If a field has multiple vocabularies as a target in field settings, you must
++	do this:
++	  Eg: fruits:apple,orange
++	Otherwise, if there is a single target, you must omit the vocabulary name:
++	  Eg: apple,orange,pear,banana
+ 
+ For Entity Reference field(Users) - put the user's email address 
+ 	comma separated 
+diff --git a/src/Form/ContentImport.php b/src/Form/ContentImport.php
+index ce06745..14c8e0e 100644
+--- a/src/Form/ContentImport.php
++++ b/src/Form/ContentImport.php
+@@ -338,9 +338,19 @@ class ContentImport extends ConfigFormBase {
+               case 'entity_reference':
+                 $logVariationFields .= "Importing Reference Type (" . $fieldSettings[$f]['target_type'] . ") :: ";
+                 if ($fieldSettings[$f]['target_type'] == 'taxonomy_term') {
+-                  $reference = explode(":", $data[$keyIndex[$fieldNames[$f]]]);
+-                  if (is_array($reference) && $reference[0] != '') {
+-                    $terms = ContentImport::getTermReference($reference[0], $reference[1]);
++                  $target_bundles = $fieldSettings[$f]['handler_settings']['target_bundles'];
++                  // If vocabulary field settings target is single, assume it.
++                  if (count($target_bundles) == 1 && !empty($data[$keyIndex[$fieldNames[$f]]])) {
++                    $terms = ContentImport::getTermReference($target_bundles[key($target_bundles)], $data[$keyIndex[$fieldNames[$f]]]);
++                  }
++                  // If not, assume vocabulary is added with ":" delimiter.
++                  else {
++                    $reference = explode(":", $data[$keyIndex[$fieldNames[$f]]]);
++                    if (is_array($reference) && $reference[0] != '') {
++                      $terms = ContentImport::getTermReference($reference[0], $reference[1]);
++                    }
++                  }
++                  if (!empty($terms)) {
+                     $nodeArray[$fieldNames[$f]] = $terms;
+                   }
+                 }

@@ -1,0 +1,21 @@
+***************
+*** 66,72 ****
+  
+  For Entity Reference field(Taxonomy) - put the data as Vocabulary: term1, term2
+  	If the Vocabulary or Term is not exists it will create automatically.
+- 	Eg: fruits:apple:orange
+  
+  For Entity Reference field(Users) - put the user's email address 
+  	comma separated 
+--- 66,76 ----
+  
+  For Entity Reference field(Taxonomy) - put the data as Vocabulary: term1, term2
+  	If the Vocabulary or Term is not exists it will create automatically.
++ 	If a field has multiple vocabularies as a target in field settings, you must
++ 	do this:
++ 	  Eg: fruits:apple,orange
++ 	Otherwise, if there is a single target, you must omit the vocabulary name:
++ 	  Eg: apple,orange,pear,banana
+  
+  For Entity Reference field(Users) - put the user's email address 
+  	comma separated 
