@@ -37,7 +37,7 @@
         "drupal/veoa": "^1.0",
         "drupal/views_advanced_routing": "1.x-dev",
         "drupal/views_slideshow": "^4.5",
-        "drupal/webform": "^5.0@beta",
+        "drupal/webform": "5.x-dev",
         "drush/drush": "~8",
         "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "^8"

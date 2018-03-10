@@ -74,7 +74,7 @@ abstract class WebformComputedBase extends FormElement {
       $element['value']['#markup'] = $value;
 
       // Include hidden element so that computed value will be available to
-      // conditional logic.
+      // conditions (#states).
       $element['#tree'] = TRUE;
       $element['hidden'] = [
         '#type' => 'hidden',
@@ -87,7 +87,7 @@ abstract class WebformComputedBase extends FormElement {
       $element['#type'] = 'item';
     }
 
-    if (isset($element['#states'])) {
+    if (!empty($element['#states'])) {
       webform_process_states($element, '#wrapper_attributes');
     }
 

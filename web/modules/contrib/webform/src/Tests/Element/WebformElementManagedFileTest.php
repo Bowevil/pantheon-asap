@@ -3,6 +3,7 @@
 namespace Drupal\webform\Tests\Element;
 
 use Drupal\file\Entity\File;
+use Drupal\webform\Entity\Webform;
 use Drupal\webform\Entity\WebformSubmission;
 
 /**
@@ -13,11 +14,18 @@ use Drupal\webform\Entity\WebformSubmission;
 class WebformElementManagedFileTest extends WebformElementManagedFileTestBase {
 
   /**
+   * Modules to enable.
+   *
+   * @var array
+   */
+  public static $modules = ['file', 'webform'];
+
+  /**
    * Webforms to load.
    *
    * @var array
    */
-  protected static $testWebforms = ['test_element_managed_file', 'test_element_media_file'];
+  protected static $testWebforms = ['test_element_managed_file', 'test_element_managed_file_name'];
 
   /**
    * Test single and multiple file upload.
@@ -42,40 +50,44 @@ class WebformElementManagedFileTest extends WebformElementManagedFileTestBase {
   }
 
   /**
-   * Test media file upload elements.
+   * Test the file renaming feature.
+   *
+   * The property #file_name_pattern is tested.
    */
-  public function testMediaFileUpload() {
-    /* Element render */
+  protected function testFileRename() {
+    $webform = Webform::load('test_element_managed_file_name');
 
-    // Get test webform.
-    $this->drupalGet('webform/test_element_media_file');
+    $source_for_filename = $this->randomMachineName();
+    $sid = $this->postSubmission($webform, [
+      'source_for_filename' => $source_for_filename,
+      'files[file_single]' => \Drupal::service('file_system')->realpath($this->files[0]->uri),
+      'files[file_multiple][]' => \Drupal::service('file_system')->realpath($this->files[0]->uri),
+    ]);
 
-    // Check document file.
-    $this->assertRaw('<input data-drupal-selector="edit-document-file-upload" type="file" id="edit-document-file-upload" name="files[document_file]" size="22" class="js-form-file form-file" />');
+    $this->drupalLogin($this->adminSubmissionUser);
+    // Edit the submission and insert 1 extra file into the multiple element.
+    $this->drupalPostForm('webform/' . $webform->id() . '/submissions/' . $sid . '/edit', [
+      'files[file_multiple][]' => \Drupal::service('file_system')->realpath($this->files[1]->uri),
+    ], 'Save');
+    $this->drupalLogout();
 
-    // Check audio file.
-    $this->assertRaw('<input data-drupal-selector="edit-audio-file-upload" accept="audio/*" type="file" id="edit-audio-file-upload" name="files[audio_file]" size="22" class="js-form-file form-file" />');
+    /** @var \Drupal\webform\WebformSubmissionInterface $submission */
+    $submission = WebformSubmission::load($sid);
 
-    // Check image file.
-    $this->assertRaw('<input data-drupal-selector="edit-image-file-upload" accept="image/*" type="file" id="edit-image-file-upload" name="files[image_file]" size="22" class="js-form-file form-file" />');
+    /** @var \Drupal\file\FileInterface $single_file */
+    $single_file = File::load($submission->getElementData('file_single'));
+    $this->assertEqual('file_single_' . $source_for_filename . '.txt', $single_file->getFilename());
 
-    // Check video file.
-    $this->assertRaw('<input data-drupal-selector="edit-video-file-upload" accept="video/*" type="file" id="edit-video-file-upload" name="files[video_file]" size="22" class="js-form-file form-file" />');
+    /** @var \Drupal\file\FileInterface[] $multiple_file */
+    $multiple_file = File::loadMultiple($submission->getElementData('file_multiple'));
+    $this->assertEqual(count($multiple_file), 2, 'Two files found in the multiple element.');
 
-    /* Element processing */
-
-    // Get test webform preview with test values.
-    $this->drupalLogin($this->rootUser);
-    $this->drupalPostForm('webform/test_element_media_file/test', [], t('Preview'));
-
-    // Check audio file preview.
-    $this->assertRaw('<source src="' . $this->getAbsoluteUrl('/system/files/webform/test_element_media_file/_sid_/audio_file_mp3.mp3') . '" type="audio/mpeg">');
-
-    // Check image file preview.
-    $this->assertRaw('<img src="' . $this->getAbsoluteUrl('/system/files/webform/test_element_media_file/_sid_/image_file_jpg.jpg') . '" class="webform-image-file" />');
-
-    // Check video file preview.
-    $this->assertRaw('<source src="' . $this->getAbsoluteUrl('/system/files/webform/test_element_media_file/_sid_/video_file_mp4.mp4') . '" type="video/mp4">');
+    $i = -1;
+    foreach ($multiple_file as $file) {
+      $suffix = $i == -1 ? '' : '_' . $i;
+      $this->assertEqual('file_multiple_' . $source_for_filename . $suffix . '.txt', $file->getFilename());
+      $i++;
+    }
   }
 
   /****************************************************************************/
@@ -104,13 +116,13 @@ class WebformElementManagedFileTest extends WebformElementManagedFileTestBase {
     /** @var \Drupal\webform\WebformSubmissionInterface $submission */
     $submission = WebformSubmission::load($sid);
 
-    /** @var \Drupal\file\Entity\File $file */
+    /** @var \Drupal\file\FileInterface $file */
     $fid = $this->getLastFileId();
     $file = File::load($fid);
 
     // Check that test file was uploaded to the current submission.
     $second = ($type == 'multiple') ? [$fid] : $fid;
-    $this->assertEqual($submission->getData($key), $second, 'Test file was upload to the current submission');
+    $this->assertEqual($submission->getElementData($key), $second, 'Test file was upload to the current submission');
 
     // Check test file file usage.
     $this->assertIdentical(['webform' => ['webform_submission' => [$sid => '1']]], $this->fileUsage->listUsage($file), 'The file has 1 usage.');
@@ -152,7 +164,7 @@ class WebformElementManagedFileTest extends WebformElementManagedFileTestBase {
     // Submit the new file.
     $this->drupalPostForm(NULL, [], t('Save'));
 
-    /** @var \Drupal\file\Entity\File $test_file_0 */
+    /** @var \Drupal\file\FileInterface $test_file_0 */
     $new_fid = $this->getLastFileId();
     $new_file = File::load($new_fid);
 
@@ -161,12 +173,12 @@ class WebformElementManagedFileTest extends WebformElementManagedFileTestBase {
 
     // Check that test new file was uploaded to the current submission.
     $second = ($type == 'multiple') ? [$new_fid] : $new_fid;
-    $this->assertEqual($submission->getData($key), $second, 'Test new file was upload to the current submission');
+    $this->assertEqual($submission->getElementData($key), $second, 'Test new file was upload to the current submission');
 
     // Check that test file was deleted from the disk and database.
     $this->assert(!file_exists($file->getFileUri()), 'Test file deleted from disk');
-    $this->assertEqual(0, \Drupal::database()->query('SELECT COUNT(fid) AS total FROM {file_managed} WHERE fid=:fid', [':fid' => $fid])->fetchField(), 'Test file 0 deleted from database');
-    $this->assertEqual(0, \Drupal::database()->query('SELECT COUNT(fid) AS total FROM {file_usage} WHERE fid=:fid', [':fid' => $fid])->fetchField(), 'Test file 0 deleted from database');
+    $this->assertEqual(0, \Drupal::database()->query('SELECT COUNT(fid) AS total FROM {file_managed} WHERE fid = :fid', [':fid' => $fid])->fetchField(), 'Test file 0 deleted from database');
+    $this->assertEqual(0, \Drupal::database()->query('SELECT COUNT(fid) AS total FROM {file_usage} WHERE fid = :fid', [':fid' => $fid])->fetchField(), 'Test file 0 deleted from database');
 
     // Check test file 1 file usage.
     $this->assertIdentical(['webform' => ['webform_submission' => [$sid => '1']]], $this->fileUsage->listUsage($new_file), 'The new file has 1 usage.');
@@ -176,7 +188,7 @@ class WebformElementManagedFileTest extends WebformElementManagedFileTestBase {
 
     // Check that test file 1 was deleted from the disk and database.
     $this->assert(!file_exists($new_file->getFileUri()), 'Test new file deleted from disk');
-    $this->assertEqual(0, \Drupal::database()->query('SELECT COUNT(fid) AS total FROM {file_managed} WHERE fid=:fid', [':fid' => $new_fid])->fetchField(), 'Test new file deleted from database');
+    $this->assertEqual(0, \Drupal::database()->query('SELECT COUNT(fid) AS total FROM {file_managed} WHERE fid = :fid', [':fid' => $new_fid])->fetchField(), 'Test new file deleted from database');
   }
 
 }

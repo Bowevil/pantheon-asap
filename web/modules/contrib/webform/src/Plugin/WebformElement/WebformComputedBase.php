@@ -22,11 +22,15 @@ abstract class WebformComputedBase extends WebformElementBase implements Webform
    */
   public function getDefaultProperties() {
     return [
+      // Element settings.
+      'title' => '',
       // Markup settings.
       'display_on' => static::DISPLAY_ON_BOTH,
-      // General settings.
-      'title' => '',
+      // Description/Help.
+      'help' => '',
       'description' => '',
+      'more' => '',
+      'more_title' => '',
       // Form display.
       'title_display' => '',
       'description_display' => '',
@@ -71,9 +75,9 @@ abstract class WebformComputedBase extends WebformElementBase implements Webform
   /**
    * {@inheritdoc}
    */
-  protected function replaceTokens(array &$element, WebformSubmissionInterface $webform_submission) {
+  public function replaceTokens(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
     foreach ($element as $key => $value) {
-      if (!Element::child($key) && !in_array($key, ['#markup'])) {
+      if (!Element::child($key) && !in_array($key, ['#value'])) {
         $element[$key] = $this->tokenManager->replace($value, $webform_submission);
       }
     }
@@ -92,7 +96,7 @@ abstract class WebformComputedBase extends WebformElementBase implements Webform
   public function getValue(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
     if (!empty($element['#store'])) {
       // Get stored value if it is set.
-      $value = $webform_submission->getData($element['#webform_key']);
+      $value = $webform_submission->getElementData($element['#webform_key']);
       if (isset($value)) {
         return $value;
       }
