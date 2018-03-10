@@ -2981,6 +2981,7 @@ return array(
     'Drupal\\Tests\\Driver\\Drupal7FieldHandlerTest' => $vendorDir . '/drupal/drupal-driver/tests/Drupal/Tests/Driver/Drupal7FieldHandlerTest.php',
     'Drupal\\Tests\\Driver\\DrushDriverTest' => $vendorDir . '/drupal/drupal-driver/tests/Drupal/Tests/Driver/DrushDriverTest.php',
     'Drupal\\Tests\\Driver\\FieldHandlerAbstractTest' => $vendorDir . '/drupal/drupal-driver/tests/Drupal/Tests/Driver/FieldHandlerAbstractTest.php',
+    'Drupal\\veoa\\Plugin\\views\\access\\EntityOperation' => $baseDir . '/web/modules/contrib/veoa/src/Plugin/views/access/EntityOperation.php',
     'Drush\\Boot\\BaseBoot' => $vendorDir . '/drush/drush/lib/Drush/Boot/BaseBoot.php',
     'Drush\\Boot\\Boot' => $vendorDir . '/drush/drush/lib/Drush/Boot/Boot.php',
     'Drush\\Boot\\DrupalBoot' => $vendorDir . '/drush/drush/lib/Drush/Boot/DrupalBoot.php',

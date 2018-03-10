@@ -24,6 +24,7 @@
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.0.0-rc8",
+        "drupal/contentimport": "4.x-dev",
         "drupal/core": "^8",
         "drupal/devel": "^1.0",
         "drupal/ds": "^3.1",
