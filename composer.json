@@ -19,7 +19,7 @@
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/block_class": "^1.0@alpha",
-        "drupal/bootstrap": "^3.5",
+        "drupal/bootstrap": "^3.10",
         "drupal/commerce": "2.x-dev",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
