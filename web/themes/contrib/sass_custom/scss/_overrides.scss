@@ -191,6 +191,12 @@ li.active > a {
   background-color: transparent !important;
 }
 
+.nav > li > a.is-active { 
+  border-bottom: 2px solid $yellow;
+  background-color: transparent !important;
+}
+
+
 a.logo {
   img {
     max-width: 800px;
@@ -709,9 +715,6 @@ legend {
 // Contact us page-header
 .path-contact {
 
-  .webform-progress-tracker {
-    display: none;
-  }
   .page-header {
     @include breakpoint(xs) {
       padding-top: 20px;
