@@ -466,6 +466,7 @@ a.logo {
   //border-right: 1px solid $gray;
 }
 
+
 .bef-exposed-form .form--inline .form-item {
   float: left;
   clear: both;
@@ -572,8 +573,52 @@ legend {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-}
 
+
+  .bef-exposed-form {
+    margin: auto;
+    @include breakpoint(xs) {
+      width: 100%;
+    }  
+    width: 50%;
+    padding: 10px;
+
+      .search-holder {
+        white-space: nowrap;
+      }
+
+        .search-label {
+          width: 150px;
+          margin-right: 15px;
+          padding: 10px 0;
+          text-align: right;
+          float: left;
+        }
+    }
+    
+    #edit-reset {
+      position: relative;
+      top: 120px;
+      @include breakpoint(xs) {
+        top: 170px;
+      }
+    }
+
+    .pagination > .active > a {
+      color: $white;
+      background: $black;  
+    }
+    .js-pager__items {
+      .is-active {
+        color: $white;
+        background: $black;
+        }
+      }
+
+    .feed-icons {
+      display: none;
+    } 
+}
 
 // schedule 
 
