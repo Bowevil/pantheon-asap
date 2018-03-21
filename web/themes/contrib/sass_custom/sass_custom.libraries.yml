@@ -2,6 +2,9 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+  js:
+    javascripts/asap.js: {}
+
 
 bootstrap-scripts:
   js:
