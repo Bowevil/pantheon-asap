@@ -1,9 +1,7 @@
   (function ($) {
     // Contact Form Behavior
     //
-    // Moves the Webform: Contact the IRS block from the Postscript First region
-    // to outside the page container, add the form close button, and handles the
-    // slideout animation using jQuery.animate().
+    // Add a correct url to the register for link href.
     Drupal.behaviors.hrefChange = {
       attach: function(context, settings) {
         $( 'a[href*="/node/"]' ).attr("href", function(i, origValue){

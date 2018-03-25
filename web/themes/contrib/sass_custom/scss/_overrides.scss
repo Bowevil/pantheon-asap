@@ -654,6 +654,43 @@ legend {
   background-color: yellow;
 }
 
+// schedule register 
+
+.page-node-type-event {
+  .tabs {
+    display: none;
+  }
+  .page-header {
+    @include breakpoint(xs) {
+      padding-top: 20px;
+      margin-top: 30px;
+      min-height: 30px;
+    }
+    @include breakpoint(md) {
+      padding-top: 40px;
+      margin-top: 30px;
+      min-height: 100px;
+    }
+  background-color: transparent;
+  background-image: url("../images/inside_header_background.jpg");
+  background-size: 100% 100%;
+  }
+  .registration-pickup-service-form-add-form {
+    margin-left: 15%;
+    margin-right: 15%;
+  @include breakpoint(xs) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  @include breakpoint(md) {
+    margin-left: 15%;
+    margin-right: 15%;
+  }  
+  #edit-people {
+    display: none;
+  }
+  }
+}
 
 
 //News Videos page list view
